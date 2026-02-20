@@ -12,10 +12,10 @@
             <header class="major">
                 <h1>Our team members</h1>
             </header>
-            
+
             <div class="row">
                 <div class="col-md-3 col-sm-6 co-xs-12 text-center">
-                    <img src="{{ asset('images/author-image-1-646x680.jpg') }}" class="img-responsive" alt="">	
+                    <img src="{{ asset('images/author-image-1-646x680.jpg') }}" class="img-responsive" alt="" style="width: 100%;">
                     <h3>Johnny William</h3>
                     <h4><em>CEO</em></h4>
                     <ul class="icons">
@@ -25,7 +25,7 @@
                 </div>
 
                 <div class="col-md-3 col-sm-6 co-xs-12 text-center">
-                    <img src="{{ asset('images/author-image-2-646x680.jpg') }}" class="img-responsive" alt="">	
+                    <img src="{{ asset('images/author-image-2-646x680.jpg') }}" class="img-responsive" alt="" style="width: 100%;">
                     <h3>Karry Pitcher</h3>
                     <h4><em>CEO</em></h4>
                     <ul class="icons">
@@ -35,7 +35,7 @@
                 </div>
 
                 <div class="col-md-3 col-sm-6 co-xs-12 text-center">
-                    <img src="{{ asset('images/author-image-3-646x680.jpg') }}" class="img-responsive" alt="">	
+                    <img src="{{ asset('images/author-image-3-646x680.jpg') }}" class="img-responsive" alt="" style="width: 100%;">
                     <h3>Mary Cool</h3>
                     <h4><em>CEO</em></h4>
                     <ul class="icons">
@@ -45,7 +45,7 @@
                 </div>
 
                 <div class="col-md-3 col-sm-6 co-xs-12 text-center">
-                    <img src="{{ asset('images/author-image-4-646x680.jpg') }}" class="img-responsive" alt="">	
+                    <img src="{{ asset('images/author-image-4-646x680.jpg') }}" class="img-responsive" alt="" style="width: 100%;">
                     <h3>Michael Soft</h3>
                     <h4><em>CEO</em></h4>
                     <ul class="icons">
