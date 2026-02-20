@@ -1,3 +1,4 @@
+@if(!isset($is_index))
 @extends('frontend.layouts.app')
 
 @section('title', 'Contact Us - Nexer Tech Solutions')
@@ -18,6 +19,7 @@
     </section>
 
 </div>
+@endif
 
 <!-- Contact -->
 <section id="contact">
@@ -88,7 +90,10 @@
         </section>
     </div>
 </section>
+
+@if(!isset($is_index))
 @endsection
+@endif
 
 @push('styles')
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@24.5.2/build/css/intlTelInput.css">
