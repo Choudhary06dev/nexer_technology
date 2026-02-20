@@ -4,17 +4,14 @@
 
 @section('content')
 
-<!-- Banner -->
-<section id="banner" class="major">
-    <div class="inner">
-        <header class="major">
-            <h1>Building Socially Impacting Solutions</h1>
-        </header>
-        <div class="content">
-            <p>Empower societies, engage for impact</p>
-            <ul class="actions">
-                <li><a href="#contact" class="button next scrolly">Contact us</a></li>
-            </ul>
+<!-- Hero Section -->
+<section class="premium-hero">
+    <div class="hero-content">
+        <h1>Empowering Your <span>Digital Future</span></h1>
+        <p>Nexer Technology Solutions provides cutting-edge tech expertise to scale and transform your business for the modern landscape.</p>
+        <div class="hero-actions">
+            <a href="#about" class="hero-btn primary scrolly">Learn More</a>
+            <a href="#contact" class="hero-btn secondary scrolly">Get Started</a>
         </div>
     </div>
 </section>
