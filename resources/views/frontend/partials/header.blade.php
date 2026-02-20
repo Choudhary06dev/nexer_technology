@@ -5,11 +5,11 @@
     <!-- Desktop Navigation -->
     <nav class="desktop-nav">
         <ul>
-            <li> <a href="{{ route('home') }}">Home </a> </li>
-            <li> <a href="{{ route('blog') }}">Blog</a> </li>
-            <li> <a href="{{ route('about') }}">About Us</a> </li>
-            <li> <a href="{{ route('authors') }}">Authors</a> </li>
-            <li> <a href="{{ route('contact') }}">Contact Us</a> </li>
+            <li> <a href="{{ url('/#banner') }}">Home </a> </li>
+            <li> <a href="{{ url('/#blog') }}">Blog</a> </li>
+            <li> <a href="{{ url('/#about') }}">About Us</a> </li>
+            <li> <a href="{{ url('/#team') }}">Authors</a> </li>
+            <li> <a href="{{ url('/#contact') }}">Contact Us</a> </li>
         </ul>
     </nav>
 

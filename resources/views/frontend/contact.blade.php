@@ -57,13 +57,10 @@
                         <label for="message">Notes</label>
                         <textarea name="message" id="message" rows="6" placeholder="Tell us about your project..."></textarea>
                     </div>
-
-                    <div class="field half text-right">
-                        <ul class="actions">
-                            <li><input type="submit" value="Send Message" class="primary" /></li>
-                        </ul>
-                    </div>
                 </div>
+                <ul class="actions">
+                    <li><input type="submit" value="Send Message" class="primary" /></li>
+                </ul>
             </form>
         </section>
         <section class="split">

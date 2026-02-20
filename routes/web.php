@@ -7,17 +7,18 @@ Route::get('/', function () {
     return view('frontend.index');
 })->name('home');
 
+// Redirecting separate pages to Home page sections for single-page experience
 Route::get('/blog', function () {
-    return view('frontend.blog');
+    return redirect('/#blog');
 })->name('blog');
-
 Route::get('/about-us', function () {
-    return view('frontend.about-us');
+    return redirect('/#about');
 })->name('about');
-
 Route::get('/authors', function () {
-    return view('frontend.team');
+    return redirect('/#team');
 })->name('authors');
+Route::get('/contact', function () {
+    return redirect('/#contact');
+})->name('contact');
 
-Route::get('/contact', [ContactController::class, 'index'])->name('contact');
 Route::post('/contact', [ContactController::class, 'store']);
