@@ -1076,7 +1076,6 @@ button.next:after,
 	position: absolute;
 	right: 1.5em;
 	top: 0;
-	vertical-align: middle;
 	width: 36px;
 }
 
@@ -1644,7 +1643,6 @@ button:disabled,
 	line-height: inherit;
 	padding: 0 0.75em;
 	position: relative;
-	vertical-align: middle;
 }
 
 #header nav a:last-child {
@@ -1667,7 +1665,6 @@ button:disabled,
 	position: absolute;
 	right: 1.5em;
 	top: 0;
-	vertical-align: middle;
 	width: 24px;
 }
 
@@ -2371,7 +2368,6 @@ body.is-preload #banner>.inner {
 	text-align: right;
 	text-indent: 8em;
 	top: 0;
-	vertical-align: middle;
 	white-space: nowrap;
 	width: 8em;
 }
@@ -3019,8 +3015,295 @@ body.is-menu-visible #menu .inner {
 	text-align: center !important;
 }
 
+/* Contact Section Redesign */
+.contact-hero {
+	height: 60vh !important;
+	background: url('https://images.unsplash.com/photo-1516383274235-5f42d6c6426d?q=80&w=2070&auto=format&fit=crop') no-repeat center center fixed !important;
+	background-size: cover !important;
+}
+
+#contact.main {
+	padding: 6em 0 !important;
+	background: #141414;
+}
+
+.modern-form .field {
+	margin-bottom: 2em !important;
+}
+
+.modern-form label {
+	color: #9bf1ff !important;
+	font-size: 0.85em !important;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	margin-bottom: 0.8em !important;
+	font-weight: 600 !important;
+}
+
+.modern-form input,
+.modern-form textarea {
+	background: rgba(255, 255, 255, 0.03) !important;
+	border: 1px solid rgba(255, 255, 255, 0.1) !important;
+	border-radius: 10px !important;
+	padding: 1em 1.5em !important;
+	color: #ffffff !important;
+	transition: all 0.3s ease !important;
+}
+
+.modern-form input:focus,
+.modern-form textarea:focus {
+	background: rgba(155, 241, 255, 0.05) !important;
+	border-color: #9bf1ff !important;
+	box-shadow: 0 0 15px rgba(155, 241, 255, 0.1) !important;
+}
+
+.contact-info-list {
+	margin-top: 2em;
+}
+
+.info-item {
+	display: flex;
+	gap: 1.5em;
+	margin-bottom: 2.5em;
+	align-items: flex-start;
+}
+
+.info-icon {
+	width: 50px;
+	height: 50px;
+	background: rgba(155, 241, 255, 0.1);
+	border-radius: 12px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #9bf1ff;
+	font-size: 1.3em;
+	flex-shrink: 0;
+}
+
+.info-text h3 {
+	font-size: 0.9em !important;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	color: rgba(255, 255, 255, 0.5) !important;
+	margin-bottom: 0.4em !important;
+}
+
+.info-text a,
+.info-text span {
+	font-size: 1.1em !important;
+	color: #ffffff !important;
+	text-decoration: none;
+	line-height: 1.5;
+}
+
+.info-text a:hover {
+	color: #9bf1ff !important;
+}
+
+.contact-visual {
+	border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.alert-success i {
+	margin-right: 0.5em;
+}
+
+@media screen and (max-width: 736px) {
+	#contact.main {
+		padding: 4em 0 !important;
+	}
+}
+
 @media screen and (max-width: 980px) {
 	.about-intro .row {
 		flex-direction: column-reverse;
 	}
+}
+
+/* Team Section Redesign */
+.team-hero {
+	height: 60vh !important;
+	background: url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop') no-repeat center center fixed !important;
+	background-size: cover !important;
+}
+
+.team-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	gap: 2.5em;
+	padding: 3em 0;
+}
+
+.team-card {
+	background: #1a1a1a;
+	border-radius: 15px;
+	overflow: hidden;
+	transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+	border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.team-card:hover {
+	transform: translateY(-15px);
+	box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+	border-color: rgba(155, 241, 255, 0.3);
+}
+
+.member-img {
+	position: relative;
+	aspect-ratio: 4/5;
+	overflow: hidden;
+}
+
+.member-img img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: transform 0.6s ease;
+}
+
+.team-card:hover .member-img img {
+	transform: scale(1.1);
+}
+
+.member-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(to bottom, transparent 0%, rgba(20, 20, 20, 0.8) 100%);
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+	padding-bottom: 2em;
+	opacity: 0;
+	transition: opacity 0.3s ease;
+}
+
+.team-card:hover .member-overlay {
+	opacity: 1;
+}
+
+.social-links {
+	display: flex;
+	gap: 1em;
+}
+
+.social-links a {
+	width: 40px;
+	height: 40px;
+	background: #9bf1ff;
+	color: #1a1a1a;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-decoration: none;
+	transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+	background: #ffffff;
+	transform: scale(1.1);
+}
+
+.member-info {
+	padding: 1.5em;
+	text-align: center;
+}
+
+.member-info h3 {
+	font-size: 1.25em !important;
+	margin-bottom: 0.3em !important;
+	color: #ffffff !important;
+}
+
+.member-info h4 {
+	font-size: 0.85em !important;
+	color: #9bf1ff !important;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	margin-bottom: 0 !important;
+}
+
+/* Blog Section Enhancements */
+.blog-hero {
+	height: 60vh !important;
+	background: url('https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=2070&auto=format&fit=crop') no-repeat center center fixed !important;
+	background-size: cover !important;
+}
+
+.blog-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+	gap: 3em;
+	margin-top: 3em;
+}
+
+.blog-post-card {
+	background: #1a1a1a;
+	border-radius: 15px;
+	overflow: hidden;
+	border: 1px solid rgba(255, 255, 255, 0.05);
+	transition: all 0.3s ease;
+}
+
+.blog-post-card:hover {
+	border-color: rgba(155, 241, 255, 0.2);
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.blog-img {
+	height: 220px;
+	overflow: hidden;
+}
+
+.blog-img img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: transform 0.5s ease;
+}
+
+.blog-post-card:hover .blog-img img {
+	transform: scale(1.05);
+}
+
+.blog-body {
+	padding: 2em;
+}
+
+.blog-body h3 {
+	font-size: 1.4em !important;
+	margin-bottom: 0.8em !important;
+	color: #ffffff !important;
+	line-height: 1.3 !important;
+}
+
+.blog-body p {
+	font-size: 0.9em !important;
+	color: rgba(255, 255, 255, 0.7) !important;
+	margin-bottom: 1.5em !important;
+}
+
+.blog-btn {
+	color: #9bf1ff !important;
+	text-decoration: none;
+	font-weight: 600;
+	font-size: 0.85em;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5em;
+	transition: gap 0.3s ease;
+}
+
+.blog-btn:hover {
+	gap: 0.8em;
+}
+
+.text-center {
+	text-align: center !important;
 }

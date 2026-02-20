@@ -1,94 +1,108 @@
+@if(!isset($is_index))
 @extends('frontend.layouts.app')
 
 @section('title', 'Contact Us - Nexer Tech Solutions')
 
 @section('content')
-<!-- Main -->
-<div id="main" class="alt">
-
-    <!-- One -->
-    <section id="one">
-        <div class="inner">
-            <header class="major">
-                <h1>Contact Us</h1>
-            </header>
-            <span class="image main"><img src="{{ asset('images/map.png') }}" alt="" /></span>
-            <p>Have a project in mind or need help with a software solution? We're here to help! Get in touch with Nexer Tech Solution — our team is ready to answer your questions, discuss your ideas, and provide the support you need.</p>
-        </div>
-    </section>
-
-</div>
-
-<!-- Contact -->
-<section id="contact">
-    <div class="inner">
-        <section>
-            <header class="major">
-                <h2>Contact us</h2>
-            </header>
-
-            @if(session('success'))
-            <div class="alert alert-success">
-                {{ session('success') }}
-            </div>
-            @endif
-
-            <form method="post" action="{{ url('/contact') }}">
-                @csrf
-                <div class="fields">
-                    <div class="field half">
-                        <label for="name">Name</label>
-                        <input type="text" name="name" id="name" placeholder="Your Name" />
-                    </div>
-                    <div class="field half">
-                        <label for="email">Email</label>
-                        <input type="email" name="email" id="email" placeholder="Your Email" />
-                    </div>
-                    <div class="field half">
-                        <label for="phone">Phone Number</label>
-                        <input type="tel" name="phone" id="phone" placeholder="Your Phone" />
-                        <input type="hidden" name="full_phone" id="full_phone">
-                    </div>
-                    <div class="field half">
-                        <label for="subject">Subject</label>
-                        <input type="text" name="subject" id="subject" placeholder="Project Subject" />
-                    </div>
-                    <div class="field">
-                        <label for="message">Notes</label>
-                        <textarea name="message" id="message" rows="6" placeholder="Tell us about your project..."></textarea>
-                    </div>
-                </div>
-                <ul class="actions">
-                    <li><input type="submit" value="Send Message" class="primary" /></li>
-                </ul>
-            </form>
-        </section>
-        <section class="split">
-            <section>
-                <div class="contact-method">
-                    <span class="icon alt fa-envelope"></span>
-                    <h3>Email</h3>
-                    <a href="mailto:manager@nexersol.com">manager@nexersol.com</a>
-                </div>
-            </section>
-            <section>
-                <div class="contact-method">
-                    <span class="icon alt fa-phone"></span>
-                    <h3>Phone</h3>
-                    <span>+923084992485</span>
-                </div>
-            </section>
-            <section>
-                <div class="contact-method">
-                    <span class="icon alt fa-home"></span>
-                    <h3>Address</h3>
-                    <span>915 High Q Tower<br> 1 Jail Rd, Gulberg V, Lahore</span>
-                </div>
-            </section>
-        </section>
+<!-- Contact Hero -->
+<section class="premium-hero contact-hero">
+    <div class="hero-content">
+        <h1>Get in <span>Touch</span></h1>
+        <p>Let's discuss your next breakthrough. Our experts are ready to turn your vision into reality.</p>
     </div>
 </section>
+@endif
+
+<!-- Contact Section -->
+<section id="contact" class="main">
+    <div class="inner">
+        <div class="row gtr-200">
+            <!-- Form Side -->
+            <div class="col-7 col-12-medium">
+                <header class="major">
+                    <h2>Send us a Message</h2>
+                </header>
+
+                @if(session('success'))
+                <div class="alert alert-success">
+                    <i class="fa fa-check-circle"></i> {{ session('success') }}
+                </div>
+                @endif
+
+                <form method="post" action="{{ url('/contact') }}" class="modern-form">
+                    @csrf
+                    <div class="fields">
+                        <div class="field half">
+                            <label for="name">Name</label>
+                            <input type="text" name="name" id="name" placeholder="John Doe" required />
+                        </div>
+                        <div class="field half">
+                            <label for="email">Email</label>
+                            <input type="email" name="email" id="email" placeholder="john@example.com" required />
+                        </div>
+                        <div class="field half">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" name="phone" id="phone" placeholder="0300 1234567" required />
+                            <input type="hidden" name="full_phone" id="full_phone">
+                        </div>
+                        <div class="field half">
+                            <label for="subject">Subject</label>
+                            <input type="text" name="subject" id="subject" placeholder="Project Inquiry" required />
+                        </div>
+                        <div class="field">
+                            <label for="message">Message</label>
+                            <textarea name="message" id="message" rows="5" placeholder="Tell us about your project or requirements..." required></textarea>
+                        </div>
+                    </div>
+                    <ul class="actions">
+                        <li><button type="submit" class="hero-btn primary">Send Message <i class="fa fa-paper-plane"></i></button></li>
+                    </ul>
+                </form>
+            </div>
+
+            <!-- Info Side -->
+            <div class="col-5 col-12-medium">
+                <header class="major">
+                    <h2>Contact Information</h2>
+                </header>
+                
+                <div class="contact-info-list">
+                    <div class="info-item">
+                        <div class="info-icon"><i class="fa fa-envelope"></i></div>
+                        <div class="info-text">
+                            <h3>Email</h3>
+                            <a href="mailto:manager@nexersol.com">manager@nexersol.com</a>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon"><i class="fa fa-phone"></i></div>
+                        <div class="info-text">
+                            <h3>Phone</h3>
+                            <a href="tel:+923084992485">+92 308 4992485</a>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon"><i class="fa fa-map-marker"></i></div>
+                        <div class="info-text">
+                            <h3>Address</h3>
+                            <span>915 High Q Tower, 1 Jail Rd,<br>Gulberg V, Lahore, Pakistan</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Map / Visual element placeholder -->
+                <div class="contact-visual modern-img-frame" style="margin-top: 2em; height: 200px; background: url('{{ asset('images/map.png') }}') no-repeat center center; background-size: cover;">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@if(!isset($is_index))
 @endsection
+@endif
 
 @push('styles')
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@24.5.2/build/css/intlTelInput.css">

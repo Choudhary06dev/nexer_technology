@@ -1,3 +1,4 @@
+@if(!isset($is_index))
 @extends('frontend.layouts.app')
 
 @section('title', 'About Us - Nexer Tech Solutions')
@@ -10,9 +11,10 @@
         <p>A legacy of innovation, high-performance solutions, and a vision to empower digital transformations globally.</p>
     </div>
 </section>
+@endif
 
 <!-- Main Content Area -->
-<div id="main" class="alt">
+<div id="main" class="{{ !isset($is_index) ? 'alt' : '' }}">
     
     <!-- Who We Are Section -->
     <section class="about-intro">
@@ -75,7 +77,7 @@
         </div>
     </section>
 
-    <!-- Philosphy Section -->
+    <!-- Philosophy Section -->
     <section class="about-philosophy footer-cta">
         <div class="inner text-center">
             <header class="major">
@@ -90,4 +92,7 @@
     </section>
 
 </div>
+
+@if(!isset($is_index))
 @endsection
+@endif
