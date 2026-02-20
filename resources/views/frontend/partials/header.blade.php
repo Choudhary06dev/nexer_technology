@@ -1,4 +1,4 @@
-<!-- Header -->
+<!-- Header (status check) -->
 <header id="header" class="alt modern-header">
     <a href="{{ url('/') }}" class="logo"><strong>Nexer</strong> <span>Tech Solutions</span></a>
     

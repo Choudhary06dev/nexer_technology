@@ -2527,19 +2527,24 @@ body.is-menu-visible #menu .inner {
 
 /* Modern Header Redesign */
 .modern-header {
-	background: rgba(42, 47, 74, 0.7) !important;
+	background: #000000 !important;
 	backdrop-filter: blur(10px);
 	-webkit-backdrop-filter: blur(10px);
 	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 	transition: all 0.3s ease-in-out !important;
-	height: 4.5em !important;
-	line-height: 4.5em !important;
+	height: 3.5em !important;
+	line-height: 3.5em !important;
+	position: fixed !important;
+	top: 0 !important;
+	width: 100% !important;
+	z-index: 10000 !important;
+	color: #ffffff !important;
 }
 
 .modern-header.scrolled {
-	background: rgba(36, 41, 67, 0.9) !important;
-	height: 4em !important;
-	line-height: 4em !important;
+	background: #000000 !important;
+	height: 3em !important;
+	line-height: 3em !important;
 	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
@@ -2547,6 +2552,7 @@ body.is-menu-visible #menu .inner {
 	font-size: 1.25em !important;
 	letter-spacing: 0.1em !important;
 	text-transform: none !important;
+	color: #ffffff !important;
 }
 
 .modern-header .logo strong {
@@ -2561,7 +2567,7 @@ body.is-menu-visible #menu .inner {
 .modern-header .desktop-nav {
 	display: flex;
 	align-items: center;
-	margin-right: 2em;
+	margin-right: 6em;
 }
 
 .modern-header .desktop-nav ul {
@@ -2572,13 +2578,13 @@ body.is-menu-visible #menu .inner {
 }
 
 .modern-header .desktop-nav ul li {
-	margin: 0 1.5em;
+	margin: 0 0.5em;
 	padding: 0;
 }
 
 .modern-header .desktop-nav ul li a {
 	color: #ffffff;
-	font-size: 0.9em;
+	font-size: 0.8em;
 	font-weight: 500;
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
@@ -2629,5 +2635,153 @@ body.is-menu-visible #menu .inner {
 	.modern-header .nav-toggle {
 		display: block;
 		margin-right: 1.5em;
+	}
+}
+
+/* Modern Footer Redesign */
+#footer {
+	background: #1a1a1a !important;
+	padding: 3em 0 0.5em 0 !important;
+	color: #ffffff !important;
+}
+
+#footer .inner {
+	max-width: 80em !important;
+	margin: 0 auto !important;
+	width: calc(100% - 4em) !important;
+	padding-left: 5% !important;
+}
+
+.footer-grid {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin-bottom: 2em;
+}
+
+.footer-col {
+	flex: 1;
+	min-width: 200px;
+	margin-right: 2em;
+	margin-bottom: 1em;
+}
+
+.footer-col:last-child {
+	margin-right: 0;
+}
+
+.footer-col h3 {
+	color: #ffffff !important;
+	font-size: 1em !important;
+	text-transform: none !important;
+	margin-bottom: 0.5em !important;
+	padding-bottom: 0.2em !important;
+	border-bottom: 2px solid #333 !important;
+	position: relative;
+	display: inline-block;
+	width: 85%;
+}
+
+.footer-col h3::after {
+	content: '';
+	position: absolute;
+	bottom: -2px;
+	left: 0;
+	width: 30px;
+	height: 2px;
+	background: #9bf1ff;
+}
+
+.footer-col p {
+	font-size: 0.8em !important;
+	line-height: 1.4 !important;
+	margin-bottom: 0 !important;
+	letter-spacing: normal !important;
+	color: #ffffff !important;
+}
+
+.footer-col ul {
+	list-style: none !important;
+	padding: 0 !important;
+	margin: 0 !important;
+}
+
+.footer-col ul li {
+	padding: 0 !important;
+	line-height: 1.2 !important;
+	border-top: none !important;
+}
+
+.footer-col ul li a {
+	color: #ffffff !important;
+	font-size: 0.85em !important;
+	border-bottom: none !important;
+	transition: color 0.3s ease;
+	letter-spacing: normal !important;
+	display: inline-block !important;
+	padding: 0.1em 0 !important;
+}
+
+.footer-col ul li a:hover {
+	color: #9bf1ff !important;
+}
+
+#footer .copyright-bar {
+	border-top: 1px solid #333;
+	padding-top: 0.8em;
+	padding-bottom: 0.2em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	font-size: 0.7em;
+	color: #ffffff !important;
+}
+
+.back-to-top {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	background: #9bf1ff;
+	color: #1a1a1a !important;
+	width: 40px;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-decoration: none;
+	border-bottom: none !important;
+	transition: background 0.3s ease;
+}
+
+.back-to-top:hover {
+	background: #53e3fb;
+}
+
+.back-to-top i {
+	font-size: 1.2em;
+}
+
+@media screen and (max-width: 980px) {
+	.footer-col {
+		flex: 0 0 45%;
+	}
+}
+
+@media screen and (max-width: 736px) {
+	.footer-col {
+		flex: 0 0 100%;
+		margin-right: 0;
+	}
+
+	#footer .copyright-bar {
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.back-to-top {
+		position: relative;
+		margin-top: 1em;
+		right: auto;
 	}
 }
