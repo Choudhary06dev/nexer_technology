@@ -5,7 +5,7 @@
     <!-- Desktop Navigation -->
     <nav class="desktop-nav">
         <ul>
-            <li> <a href="{{ url('/#banner') }}">Home </a> </li>
+            <li> <a href="{{ url('/') }}">Home</a> </li>
             <li> <a href="{{ url('/#blog') }}">Blog</a> </li>
             <li> <a href="{{ url('/#about') }}">About Us</a> </li>
             <li> <a href="{{ url('/#team') }}">Authors</a> </li>

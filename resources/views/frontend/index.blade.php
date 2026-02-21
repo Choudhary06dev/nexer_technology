@@ -5,7 +5,7 @@
 @section('content')
 
 <!-- Hero Section -->
-<section class="premium-hero">
+<section id="banner" class="premium-hero">
     <div class="hero-content">
         <h1>Empowering Your <span>Digital Future</span></h1>
         <p>Nexer Technology Solutions provides cutting-edge tech expertise to scale and transform your business for the modern landscape.</p>
@@ -54,19 +54,6 @@
 @push('styles')
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@24.5.2/build/css/intlTelInput.css">
 <style>
-    .iti {
-        width: 100%;
-        color: #000;
-    }
-
-    .alert-success {
-        background-color: #2eaf7d;
-        color: white;
-        padding: 15px;
-        margin-bottom: 20px;
-        border-radius: 4px;
-    }
-
     #main section {
         padding: 4em 0;
         border-top: 1px solid rgba(255, 255, 255, 0.1);
@@ -76,37 +63,12 @@
         min-height: 100vh;
     }
 
-    #contact input,
-    #contact textarea {
-        background-color: rgba(255, 255, 255, 0.05) !important;
-        color: #fff !important;
-        width: 100%;
-    }
-
-    #contact label {
-        color: #fff !important;
-        font-weight: bold;
-        margin-top: 1em;
-    }
-
-    #contact input::placeholder,
-    #contact textarea::placeholder {
-        color: rgba(255, 255, 255, 0.7) !important;
-    }
-
-    .iti__country-list {
-        color: #000;
-    }
-
-    /* Adjust form vs contact info width */
-    @media screen and (min-width: 981px) {
-        #contact .inner>section:first-of-type {
-            width: 60%;
-        }
-
-        #contact .inner>section.split {
-            width: 40%;
-        }
+    .alert-success {
+        background-color: #2eaf7d;
+        color: white;
+        padding: 15px;
+        margin-bottom: 20px;
+        border-radius: 4px;
     }
 </style>
 @endpush

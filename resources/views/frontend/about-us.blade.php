@@ -1,5 +1,5 @@
 @if(!isset($is_index))
-@extends('frontend.layouts.app')
+
 
 @section('title', 'About Us - Nexer Tech Solutions')
 
@@ -15,7 +15,7 @@
 
 <!-- Main Content Area -->
 <div id="main" class="{{ !isset($is_index) ? 'alt' : '' }}">
-    
+
     <!-- Who We Are Section -->
     <section class="about-intro">
         <div class="inner">

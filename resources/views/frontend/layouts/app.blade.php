@@ -1,6 +1,5 @@
 <!DOCTYPE HTML>
 <html>
-
 <head>
     <title>@yield('title', 'Nexer Tech Solutions')</title>
     <meta charset="utf-8" />

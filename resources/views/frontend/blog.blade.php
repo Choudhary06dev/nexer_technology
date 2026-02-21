@@ -1,5 +1,5 @@
 @if(!isset($is_index))
-@extends('frontend.layouts.app')
+
 
 @section('title', 'Blog - Nexer Tech Solutions')
 
