@@ -1,6 +1,8 @@
 <!-- Header (status check) -->
 <header id="header" class="alt modern-header">
-    <a href="{{ url('/') }}" class="logo"><strong>Nexer</strong> <span>Tech Solutions</span></a>
+    <a href="{{ url('/') }}" class="logo">
+        <img src="{{ asset('images/logo.png') }}" alt="Nexer Technology" style="height: 60px; width: auto; vertical-align: middle;">
+    </a>
 
     <!-- Desktop Navigation -->
     <nav class="desktop-nav">

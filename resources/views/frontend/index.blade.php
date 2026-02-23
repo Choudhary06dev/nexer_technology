@@ -1,6 +1,6 @@
 @extends('frontend.layouts.app')
 
-@section('title', 'Nexer Tech Solutions - Home')
+@section('title', 'Nexer Technology - Home')
 
 @section('content')
 
@@ -8,7 +8,7 @@
 <section id="banner" class="premium-hero">
     <div class="hero-content">
         <h1>Empowering Your <span>Digital Future</span></h1>
-        <p>Nexer Technology Solutions provides cutting-edge tech expertise to scale and transform your business for the modern landscape.</p>
+        <p>Nexer Technology provides cutting-edge tech expertise to scale and transform your business for the modern landscape.</p>
         <div class="hero-actions">
             <a href="#about" class="hero-btn primary scrolly">Learn More</a>
             <a href="#contact" class="hero-btn secondary scrolly">Get Started</a>
