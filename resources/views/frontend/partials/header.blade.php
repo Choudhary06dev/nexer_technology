@@ -1,7 +1,9 @@
 <!-- Header (status check) -->
 <header id="header" class="alt modern-header">
     <a href="{{ url('/') }}" class="logo">
-        <img src="{{ asset('images/logo.png') }}" alt="Nexer Technology" style="height: 60px; width: auto; vertical-align: middle;">
+        <img src="{{ asset('images/logo.png') }}" alt="Nexer Technology Icon" style="height: 38px; width: auto; vertical-align: middle; margin-right: 10px;">
+        <strong style="color: #004de6; font-weight: 800; font-size: 1em; vertical-align: middle;">Nexer</strong>
+        <span style="color: #000000; font-weight: 700; font-size: 0.85em; vertical-align: middle; opacity: 0.9;">Technology</span>
     </a>
 
     <!-- Desktop Navigation -->
