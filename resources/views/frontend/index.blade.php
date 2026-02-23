@@ -99,7 +99,7 @@
             fullPhoneInput.value = iti.getNumber();
         });
 
-        // Smooth scrolling for anchor links
+        // Smooth scrolling for anchor links (with fixed header offset)
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
@@ -107,7 +107,10 @@
                 if (targetId === '#') return;
                 const targetElement = document.querySelector(targetId);
                 if (targetElement) {
-                    targetElement.scrollIntoView({
+                    const headerHeight = document.getElementById('header')?.offsetHeight || 80;
+                    const elementTop = targetElement.getBoundingClientRect().top + window.scrollY;
+                    window.scrollTo({
+                        top: elementTop - headerHeight,
                         behavior: 'smooth'
                     });
                 }

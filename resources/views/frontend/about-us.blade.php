@@ -17,7 +17,7 @@
 <div id="main" class="{{ !isset($is_index) ? 'alt' : '' }}">
 
     <!-- Who We Are Section -->
-    <section class="about-intro">
+    <section id="about" class="about-intro">
         <div class="inner">
             <div class="row gtr-200">
                 <div class="col-7 col-12-medium">
@@ -78,7 +78,7 @@
     </section>
 
     <!-- Philosophy Section -->
-    <section class="about-philosophy footer-cta">
+    <!-- <section class="about-philosophy footer-cta">
         <div class="inner text-center">
             <header class="major">
                 <h2>Our Philosophy</h2>
@@ -89,7 +89,7 @@
                 <li><a href="{{ route('contact') }}" class="hero-btn primary">Let’s build the future together</a></li>
             </ul>
         </div>
-    </section>
+    </section> -->
 
 </div>
 
