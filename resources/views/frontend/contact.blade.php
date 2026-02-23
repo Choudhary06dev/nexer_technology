@@ -152,7 +152,7 @@
                 <h3>Follow Us</h3>
                 <p>Stay connected with us on social media for the latest updates and tech insights.</p>
                 <div class="social-links-grid">
-                    <a href="#" class="social-link-item linkedin"><i class="fa fa-linkedin"></i><span>LinkedIn</span></a>
+                    <a href="https://www.linkedin.com/company/nexer-technology-solutions" class="social-link-item linkedin"><i class="fa fa-linkedin"></i><span>LinkedIn</span></a>
                     <a href="#" class="social-link-item twitter"><i class="fa fa-twitter"></i><span>Twitter</span></a>
                     <a href="#" class="social-link-item facebook"><i class="fa fa-facebook"></i><span>Facebook</span></a>
                     <a href="#" class="social-link-item instagram"><i class="fa fa-instagram"></i><span>Instagram</span></a>
