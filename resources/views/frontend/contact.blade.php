@@ -19,7 +19,7 @@
         <!-- Form Side -->
         <div class="contact-premium-form">
             <h2>Send us a message</h2>
-            
+
             @if(session('success'))
             <div class="alert-premium-success">
                 <i class="fa fa-check-circle"></i> {{ session('success') }}
@@ -38,7 +38,7 @@
                         <input type="email" name="email" placeholder="john@example.com" required />
                     </div>
                 </div>
-                
+
                 <div class="form-row">
                     <div class="input-group">
                         <label>Phone Number</label>
@@ -69,7 +69,7 @@
         <!-- Info Side -->
         <div class="contact-premium-info">
             <h2>Information</h2>
-            
+
             <div class="info-premium-card">
                 <div class="icon-shield"><i class="fa fa-envelope"></i></div>
                 <div class="card-details">
@@ -117,16 +117,16 @@
         gap: 15px;
         font-weight: 600;
     }
-    
+
     .phone-input-container .iti {
         width: 100% !important;
     }
-    
+
     .phone-input-container input {
         border-bottom: 2px solid #eeeeee !important;
         padding-left: 55px !important;
     }
-    
+
     .iti__country-list {
         background-color: #ffffff !important;
         color: #000000 !important;
@@ -134,40 +134,6 @@
     }
 </style>
 @endpush
-
-@push('scripts')
-<script src="https://cdn.jsdelivr.net/npm/intl-tel-input@24.5.2/build/js/intlTelInput.min.js"></script>
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const input = document.querySelector("#phone");
-        const fullPhoneInput = document.querySelector("#full_phone");
-        const iti = window.intlTelInput(input, {
-            initialCountry: "pk",
-            separateDialCode: true,
-            utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@24.5.2/build/js/utils.js",
-        });
-
-        const updateFullPhone = () => {
-            if (iti.isValidNumber()) {
-                fullPhoneInput.value = iti.getNumber();
-            } else {
-                fullPhoneInput.value = "";
-            }
-        };
-
-        input.addEventListener('change', updateFullPhone);
-        input.addEventListener('input', () => {
-            input.value = input.value.replace(/[^0-9]/g, '');
-            updateFullPhone();
-        });
-
-        document.querySelector('form').addEventListener('submit', function() {
-            fullPhoneInput.value = iti.getNumber();
-        });
-    });
-</script>
-@endpush
-
 
 @push('scripts')
 <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@24.5.2/build/js/intlTelInput.min.js"></script>
