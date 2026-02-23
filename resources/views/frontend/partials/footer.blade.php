@@ -1,11 +1,14 @@
 <!-- Footer -->
 <footer id="footer">
     <div class="inner">
+        <div class="footer-logo-row" style="margin-bottom: 25px !important; display: block !important;">
+            <img src="{{ asset('images/logo.png') }}" alt="Nexer Technology" style="height: 60px !important; display: block !important;">
+        </div>
         <div class="footer-grid">
             <!-- About Section -->
             <div class="footer-col">
                 <h3>About Nexer</h3>
-                <p>Nexer Technology Solutions is expert in providing scaleable and flexible customized ERP solutions and Data security solutions based on PKI and Cryptography that help businesses unlock their true potential with security and reliability.</p>
+                <p>Nexer Technology is expert in providing scaleable and flexible customized ERP solutions and Data security solutions based on PKI and Cryptography that help businesses unlock their true potential with security and reliability.</p>
             </div>
 
             <!-- Company Section -->
@@ -46,7 +49,7 @@
         </div>
 
         <div class="copyright-bar">
-            &copy; Copyright 2026 - Nexer Tech Solutions
+            &copy; Copyright 2026 - Nexer Technology
             <a href="#" class="back-to-top" id="backToTop">
                 <i class="fa fa-arrow-up"></i>
             </a>
