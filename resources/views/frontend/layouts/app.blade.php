@@ -36,8 +36,8 @@
         #header,
         .modern-header {
             height: auto !important;
-            min-height: 4em;
-            padding: 10px 0;
+            min-height: 3em;
+            padding: 5px 0;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             position: fixed !important;
         }
@@ -48,15 +48,16 @@
             filter: none !important;
         }
 
-        /* Nav Links: always white since header background is dark in both states */
+        /* Nav Links: dark blue per user request */
         #header nav ul li a,
         .modern-header nav ul li a {
-            color: #ffffff !important;
+            color: #004de6 !important;
         }
 
         #header nav ul li a:hover,
         .modern-header nav ul li a:hover {
-            color: #9bf1ff !important;
+            color: #004de6 !important;
+            opacity: 0.8;
         }
 
         /* Footer Compression */

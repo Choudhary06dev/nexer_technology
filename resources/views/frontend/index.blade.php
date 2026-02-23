@@ -4,8 +4,8 @@
 
 @section('content')
 
-<!-- Hero Section -->
 <section id="banner" class="premium-hero">
+    <div class="banner-bg-overlay" style="background-image: url('{{ asset('images/banner-image-1-1920x700.png') }}') !important;"></div>
     <div class="hero-content">
         <h1>Empowering Your <span>Digital Future</span></h1>
         <p>Nexer Technology provides cutting-edge tech expertise to scale and transform your business for the modern landscape.</p>
@@ -59,8 +59,28 @@
         border-top: 1px solid rgba(36, 41, 67, 0.1);
     }
 
-    #banner {
-        min-height: 100vh;
+    #banner.premium-hero {
+        min-height: 70vh !important;
+        height: 70vh !important;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .banner-bg-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-size: 100% 100% !important;
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+        z-index: 0;
+    }
+
+    .hero-content {
+        position: relative;
+        z-index: 1;
     }
 
     .alert-success {
