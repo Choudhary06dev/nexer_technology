@@ -14,7 +14,7 @@
 @endif
 
 <!-- Blog Section -->
-<section id="blog" class="main">
+<section id="blog" class="main" style="padding-top: 0.5em !important; padding-bottom: 0.5em !important;">
     <div class="inner">
         <header class="major text-center">
             <h2>Latest Insights</h2>

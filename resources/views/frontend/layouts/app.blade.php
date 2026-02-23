@@ -16,14 +16,14 @@
     <style>
         /* Fix for fixed header covering anchor sections */
         html {
-            scroll-padding-top: 80px;
+            scroll-padding-top: 28px;
             /* Offset for fixed header height */
         }
 
         section[id],
         div[id] {
-            scroll-margin-top: 80px;
-            /* Extra safety for all anchors */
+            scroll-margin-top: 28px !important;
+            /* Adjusted for better alignment */
         }
 
         .logo img {

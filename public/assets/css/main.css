@@ -2773,21 +2773,33 @@ body.is-menu-visible #menu .inner {
 	max-width: 80em !important;
 	margin: 0 auto !important;
 	width: calc(100% - 4em) !important;
-	padding-left: 5% !important;
+	padding-left: 10% !important;
 }
 
 .footer-grid {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-between;
+	justify-content: flex-start;
 	margin-bottom: 2em;
 }
 
 .footer-col {
-	flex: 1;
-	min-width: 200px;
-	margin-right: 2em;
+	flex: none;
+	min-width: 180px;
 	margin-bottom: 1em;
+}
+
+.footer-col:first-child {
+	flex: 1;
+	max-width: 450px;
+}
+
+.footer-col:nth-child(2) {
+	margin-left: auto;
+}
+
+.footer-col:not(:first-child) {
+	margin-left: 3em;
 }
 
 .footer-col:last-child {
@@ -2796,22 +2808,22 @@ body.is-menu-visible #menu .inner {
 
 .footer-col h3 {
 	color: #ffffff !important;
-	font-size: 1em !important;
+	font-size: 1.1em !important;
 	text-transform: none !important;
-	margin-bottom: 0.5em !important;
-	padding-bottom: 0.2em !important;
-	border-bottom: 2px solid #333 !important;
+	margin-bottom: 0.8em !important;
+	padding-bottom: 0.4em !important;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
 	position: relative;
 	display: inline-block;
-	width: 85%;
+	width: auto;
 }
 
 .footer-col h3::after {
 	content: '';
 	position: absolute;
-	bottom: -2px;
+	bottom: -1px;
 	left: 0;
-	width: 30px;
+	width: 40px;
 	height: 2px;
 	background: #004de6;
 }
