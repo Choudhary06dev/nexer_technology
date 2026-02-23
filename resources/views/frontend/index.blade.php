@@ -55,8 +55,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@24.5.2/build/css/intlTelInput.css">
 <style>
     #main section {
-        padding: 4em 0;
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 1.5em 0;
+        border-top: 1px solid rgba(36, 41, 67, 0.1);
     }
 
     #banner {
