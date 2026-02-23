@@ -60,8 +60,8 @@
     }
 
     #banner.premium-hero {
-        min-height: 70vh !important;
-        height: 70vh !important;
+        min-height: 90vh !important;
+        height: 90vh !important;
         position: relative;
         overflow: hidden;
     }
