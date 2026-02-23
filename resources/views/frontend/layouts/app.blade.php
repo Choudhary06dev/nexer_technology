@@ -14,6 +14,18 @@
     </noscript>
     @stack('styles')
     <style>
+        /* Fix for fixed header covering anchor sections */
+        html {
+            scroll-padding-top: 80px;
+            /* Offset for fixed header height */
+        }
+
+        section[id],
+        div[id] {
+            scroll-margin-top: 80px;
+            /* Extra safety for all anchors */
+        }
+
         .logo img {
             transition: filter 0.3s ease;
             max-height: 120px;
