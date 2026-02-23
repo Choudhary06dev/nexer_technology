@@ -4,8 +4,14 @@
 
 @section('content')
 
+@php $bannerImage = asset('images/banner-image-1-1920x700.png'); @endphp
 <section id="banner" class="premium-hero">
-    <div class="banner-bg-overlay" style="background-image: url('{{ asset('images/banner-image-1-1920x700.png') }}') !important;"></div>
+    <style>
+        .banner-bg-overlay {
+            background-image: url('{{ $bannerImage }}') !important;
+        }
+    </style>
+    <div class="banner-bg-overlay"></div>
     <div class="hero-content">
         <h1>Empowering Your <span>Digital Future</span></h1>
         <p>Nexer Technology provides cutting-edge tech expertise to scale and transform your business for the modern landscape.</p>

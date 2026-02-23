@@ -17,8 +17,6 @@ Route::get('/about-us', function () {
 Route::get('/authors', function () {
     return redirect('/#team');
 })->name('authors');
-Route::get('/contact', function () {
-    return redirect('/#contact');
-})->name('contact');
+Route::get('/contact', [ContactController::class, 'index'])->name('contact');
 
 Route::post('/contact', [ContactController::class, 'store']);
