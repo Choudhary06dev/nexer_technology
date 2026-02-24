@@ -9,7 +9,7 @@ Route::get('/', function () {
 
 // Redirecting separate pages to Home page sections for single-page experience
 Route::get('/blog', function () {
-    return redirect('/#blog');
+    return view('frontend.blog');
 })->name('blog');
 Route::get('/about-us', function () {
     return redirect('/#about');

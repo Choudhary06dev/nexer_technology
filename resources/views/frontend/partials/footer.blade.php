@@ -16,10 +16,10 @@
                 <h3>Company</h3>
                 <ul>
                     <li><a href="{{ route('about') }}">About Us</a></li>
-                    <li><a href="#">Team</a></li>
+                    <li><a href="{{ route('authors') }}">Team</a></li>
                     <li><a href="#">Customers</a></li>
                     <li><a href="#">Jobs</a></li>
-                    <li><a href="#">Blog</a></li>
+                    <li><a href="{{ route('blog') }}">Blog</a></li>
                 </ul>
             </div>
 

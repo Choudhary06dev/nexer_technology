@@ -42,7 +42,11 @@
         <header class="section-header-modern">
             <div class="header-line"></div>
             <span class="sub-label">Knowledge Hub</span>
-            <h2>Latest <span>Engineering</span> Insights</h2>
+            <h2 class="circular-hover">
+                <span class="word">Latest</span>
+                <span class="word accent">Engineering</span>
+                <span class="word">Insights</span>
+            </h2>
         </header>
         @else
         <!-- Featured Post - Only on Blog Page -->
@@ -131,79 +135,7 @@
                     </div>
                 </div>
             </article>
-
-            @if(!isset($is_index))
-            <!-- Extended Posts -->
-            <!-- Article 4 -->
-            <article class="glass-card">
-                <div class="card-image-wrap">
-                    <img src="https://images.unsplash.com/photo-1586717791821-3f44a563cc4c?q=80&w=800&auto=format&fit=crop" alt="UI/UX Design">
-                    <div class="card-category-badge">Experience Design</div>
-                </div>
-                <div class="card-body-premium">
-                    <div class="card-meta-pills">
-                        <span><i class="fa fa-calendar"></i> Oct 05, 2023</span>
-                        <span><i class="fa fa-bolt"></i> Security</span>
-                    </div>
-                    <h3>User-Centric UI/UX Design</h3>
-                    <p>Why aesthetics and accessibility matter: Our approach to creating seamless digital experiences that users love to interact with.</p>
-                    <div class="card-footer-premium">
-                        <div class="mini-author">By <span>Sarah J.</span></div>
-                        <a href="{{ route('blog') }}" class="link-arrow">Details <i class="fa fa-plus"></i></a>
-                    </div>
-                </div>
-            </article>
-
-            <!-- Article 5 -->
-            <article class="glass-card">
-                <div class="card-image-wrap">
-                    <img src="https://images.unsplash.com/photo-1516259762381-22954d7d3ad2?q=80&w=800&auto=format&fit=crop" alt="API Systems">
-                    <div class="card-category-badge">Integrations</div>
-                </div>
-                <div class="card-body-premium">
-                    <div class="card-meta-pills">
-                        <span><i class="fa fa-calendar"></i> Oct 02, 2023</span>
-                        <span><i class="fa fa-bolt"></i> Best Practice</span>
-                    </div>
-                    <h3>API Integration & Connectivity</h3>
-                    <p>Connecting disparate systems to improve data flow, eliminate silos, and enhance overall operational efficiency for your business.</p>
-                    <div class="card-footer-premium">
-                        <div class="mini-author">By <span>Mike Ross</span></div>
-                        <a href="{{ route('blog') }}" class="link-arrow">Details <i class="fa fa-plus"></i></a>
-                    </div>
-                </div>
-            </article>
-
-            <!-- Article 6 -->
-            <article class="glass-card">
-                <div class="card-image-wrap">
-                    <img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?q=80&w=800&auto=format&fit=crop" alt="Startup Growth">
-                    <div class="card-category-badge">Strategy</div>
-                </div>
-                <div class="card-body-premium">
-                    <div class="card-meta-pills">
-                        <span><i class="fa fa-calendar"></i> Sep 28, 2023</span>
-                        <span><i class="fa fa-bolt"></i> Innovation</span>
-                    </div>
-                    <h3>Building Scalable MVPs</h3>
-                    <p>A strategic guide for startups on how to build and launch robust Minimum Viable Products that set the foundation for long-term success.</p>
-                    <div class="card-footer-premium">
-                        <div class="mini-author">By <span>L. Specter</span></div>
-                        <a href="{{ route('blog') }}" class="link-arrow">Details <i class="fa fa-plus"></i></a>
-                    </div>
-                </div>
-            </article>
-            @endif
         </div>
-
-        @if(isset($is_index))
-        <div class="index-footer">
-            <a href="{{ route('blog') }}" class="btn-all-insights">
-                Discover More Insights
-                <div class="btn-glow"></div>
-            </a>
-        </div>
-        @endif
     </div>
 </section>
 
@@ -462,6 +394,50 @@
         font-size: 2.8em;
         font-weight: 800;
         color: #0f172a !important;
+        cursor: default;
+    }
+
+    .section-header-modern h2.circular-hover .word {
+        display: inline-block;
+        transition: color 0.3s;
+    }
+
+    .section-header-modern h2.circular-hover .word.accent {
+        color: #6366f1;
+    }
+
+    .section-header-modern h2.circular-hover:hover .word {
+        animation: circularFloat 3s infinite linear;
+    }
+
+    .section-header-modern h2.circular-hover:hover .word:nth-child(2) {
+        animation-delay: 0.5s;
+    }
+
+    .section-header-modern h2.circular-hover:hover .word:nth-child(3) {
+        animation-delay: 1s;
+    }
+
+    @keyframes circularFloat {
+        0% {
+            transform: translate(0, -12px);
+        }
+
+        25% {
+            transform: translate(12px, 0px);
+        }
+
+        50% {
+            transform: translate(0, 12px);
+        }
+
+        75% {
+            transform: translate(-12px, 0px);
+        }
+
+        100% {
+            transform: translate(0, -12px);
+        }
     }
 
     /* ===== FEATURED CARD ===== */
@@ -820,271 +796,15 @@
 @endsection
 @endif
 
-
-@push('styles')
-<style>
-    /* ===== BLOG HERO ===== */
-    .blog-hero-premium {
-        background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #0f172a 100%);
-        padding: 120px 2em 100px;
-        text-align: center;
-        position: relative;
-        overflow: hidden;
-    }
-
-    .blog-hero-overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: radial-gradient(circle at 50% 50%, rgba(99, 102, 241, 0.1) 0%, transparent 70%);
-        pointer-events: none;
-    }
-
-    .blog-hero-inner {
-        position: relative;
-        z-index: 2;
-        max-width: 800px;
-        margin: 0 auto;
-    }
-
-    .blog-badge {
-        display: inline-block;
-        background: rgba(99, 102, 241, 0.15);
-        border: 1px solid rgba(99, 102, 241, 0.3);
-        color: #a5b4fc;
-        padding: 8px 20px;
-        border-radius: 50px;
-        font-size: 0.8em;
-        font-weight: 700;
-        letter-spacing: 0.05em;
-        text-transform: uppercase;
-        margin-bottom: 2em;
-    }
-
-    .blog-hero-premium h1 {
-        color: #ffffff;
-        font-size: 3.8em;
-        font-weight: 800;
-        margin-bottom: 0.4em !important;
-        letter-spacing: -0.02em;
-    }
-
-    .blog-hero-premium h1 span {
-        color: #818cf8;
-    }
-
-    .blog-hero-premium p {
-        color: rgba(255, 255, 255, 0.7);
-        font-size: 1.2em;
-        line-height: 1.7;
-    }
-
-    /* ===== BLOG MAIN SECTION ===== */
-    .blog-main-section {
-        background: #f8fafc;
-        padding: 80px 2em;
-    }
-
-    .blog-container {
-        max-width: 1200px;
-        margin: 0 auto;
-    }
-
-    .blog-section-header {
-        text-align: center;
-        margin-bottom: 50px;
-    }
-
-    .blog-header-badge {
-        color: #6366f1;
-        font-weight: 700;
-        font-size: 0.9em;
-        text-transform: uppercase;
-        letter-spacing: 0.1em;
-        margin-bottom: 12px;
-    }
-
-    .blog-section-header h2 {
-        font-size: 2.5em;
-        font-weight: 800;
-        color: #0f172a;
-        margin-bottom: 15px !important;
-    }
-
-    .blog-section-header h2 span {
-        color: #6366f1;
-    }
-
-    .blog-section-header p {
-        color: #64748b;
-        max-width: 600px;
-        margin: 0 auto;
-    }
-
-    /* ===== BLOG GRID & CARDS ===== */
-    .blog-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 2.5em;
-    }
-
-    .blog-card {
-        background: #ffffff;
-        border-radius: 20px;
-        overflow: hidden;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-        border: 1px solid #e2e8f0;
-        transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-        display: flex;
-        flex-direction: column;
-    }
-
-    .blog-card:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
-        border-color: rgba(99, 102, 241, 0.3);
-    }
-
-    .blog-card-img {
-        position: relative;
-        height: 240px;
-        overflow: hidden;
-    }
-
-    .blog-card-img img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transition: transform 0.6s ease;
-    }
-
-    .blog-card:hover .blog-card-img img {
-        transform: scale(1.1);
-    }
-
-    .blog-category {
-        position: absolute;
-        top: 20px;
-        left: 20px;
-        background: rgba(15, 23, 42, 0.8);
-        backdrop-filter: blur(8px);
-        color: #ffffff;
-        padding: 6px 16px;
-        border-radius: 50px;
-        font-size: 0.75em;
-        font-weight: 700;
-        letter-spacing: 0.02em;
-    }
-
-    .blog-card-content {
-        padding: 2em;
-        flex-grow: 1;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .blog-meta {
-        display: flex;
-        gap: 1.5em;
-        margin-bottom: 1.2em;
-        color: #94a3b8;
-        font-size: 0.82em;
-        font-weight: 600;
-    }
-
-    .blog-meta span i {
-        margin-right: 6px;
-    }
-
-    .blog-card-content h3 {
-        font-size: 1.4em !important;
-        font-weight: 700;
-        color: #1e293b;
-        line-height: 1.4 !important;
-        margin-bottom: 12px !important;
-    }
-
-    .blog-card-content p {
-        color: #64748b;
-        font-size: 0.95em;
-        line-height: 1.6;
-        margin-bottom: 25px;
-        flex-grow: 1;
-    }
-
-    .blog-read-btn {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        color: #6366f1 !important;
-        font-weight: 700;
-        font-size: 0.9em;
-        text-transform: uppercase;
-        letter-spacing: 0.05em;
-        text-decoration: none;
-        transition: all 0.3s ease;
-        border-bottom: 0 !important;
-    }
-
-    .blog-read-btn:hover {
-        gap: 15px;
-        color: #4f46e5 !important;
-    }
-
-    /* Footer Button (Index only) */
-    .blog-footer-btn {
-        margin-top: 50px;
-        text-align: center;
-    }
-
-    .blog-view-all {
-        display: inline-flex;
-        align-items: center;
-        gap: 12px;
-        background: #0f172a;
-        color: white !important;
-        padding: 16px 36px;
-        border-radius: 50px;
-        font-weight: 700;
-        text-decoration: none;
-        transition: all 0.3s;
-        box-shadow: 0 10px 25px rgba(15, 23, 42, 0.2);
-        border: 0 !important;
-    }
-
-    .blog-view-all:hover {
-        background: #6366f1;
-        transform: translateY(-3px);
-        box-shadow: 0 15px 30px rgba(99, 102, 241, 0.3);
-    }
-
-    /* ===== RESPONSIVE ===== */
-    @media (max-width: 1024px) {
-        .blog-grid {
-            grid-template-columns: repeat(2, 1fr);
-        }
-
-        .blog-hero-premium h1 {
-            font-size: 3em;
-        }
-    }
-
-    @media (max-width: 768px) {
-        .blog-grid {
-            grid-template-columns: 1fr;
-            max-width: 500px;
-            margin: 0 auto;
-        }
-
-        .blog-section-header h2 {
-            font-size: 2em;
-        }
-    }
-</style>
+@push('scripts')
+<script>
+    document.querySelectorAll('.link-arrow').forEach(link => {
+        link.addEventListener('click', function(e) {
+            if (this.getAttribute('href') === "{{ route('blog') }}" || this.getAttribute('href') === '#') {
+                e.preventDefault();
+                alert('Detailed case study for this project is being documented and will be available soon!');
+            }
+        });
+    });
+</script>
 @endpush
-
-@if(!isset($is_index))
-@endsection
-@endif
