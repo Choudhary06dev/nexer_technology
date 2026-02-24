@@ -526,6 +526,7 @@
     .form-submit-row {
         display: flex;
         align-items: center;
+        justify-content: center;
         gap: 1.5em;
         flex-wrap: wrap;
     }
@@ -534,22 +535,49 @@
         display: inline-flex;
         align-items: center;
         gap: 10px;
-        background: linear-gradient(135deg, #6366f1, #818cf8);
+        background: #0f172a;
         color: white;
         border: none;
         border-radius: 12px;
-        padding: 15px 32px;
+        padding: 15px 35px;
         font-size: 1em;
         font-weight: 700;
         cursor: pointer;
-        transition: all 0.3s;
-        box-shadow: 0 4px 20px rgba(99, 102, 241, 0.35);
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: 0 4px 15px rgba(15, 23, 42, 0.25);
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+    }
+
+    .contact-send-btn::before,
+    .contact-send-btn::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        width: 0;
+        height: 100%;
+        background: #1e293b;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: -1;
+    }
+
+    .contact-send-btn::before {
+        left: 0;
+    }
+
+    .contact-send-btn::after {
+        right: 0;
+    }
+
+    .contact-send-btn:hover::before,
+    .contact-send-btn:hover::after {
+        width: 50%;
     }
 
     .contact-send-btn:hover {
         transform: translateY(-2px);
-        box-shadow: 0 8px 28px rgba(99, 102, 241, 0.45);
-        background: linear-gradient(135deg, #4f46e5, #6366f1);
+        box-shadow: 0 8px 25px rgba(15, 23, 42, 0.4);
     }
 
     .contact-send-btn:disabled {
@@ -559,9 +587,14 @@
     }
 
     .btn-icon {
-        background: rgba(255, 255, 255, 0.2);
+        background: rgba(255, 255, 255, 0.1);
         border-radius: 8px;
         padding: 4px 8px;
+        transition: transform 0.3s;
+    }
+
+    .contact-send-btn:hover .btn-icon {
+        transform: scale(1.1) rotate(-10deg);
     }
 
     .form-note {

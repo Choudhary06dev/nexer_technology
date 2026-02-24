@@ -2892,6 +2892,7 @@ body.is-menu-visible #menu .inner {
 
 .back-to-top:hover {
 	background: #004de6;
+	color: #1a1a1a !important;
 }
 
 .back-to-top i {
