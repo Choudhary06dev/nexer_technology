@@ -1,5 +1,8 @@
 @if(!isset($is_index))
 
+@endif
+@if(!isset($is_index))
+
 
 @section('title', 'Our Team - Nexer Tech Solutions')
 

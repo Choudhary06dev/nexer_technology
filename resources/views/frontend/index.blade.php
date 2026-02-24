@@ -27,6 +27,8 @@
 
     @include('frontend.about-us', ['is_index' => true])
 
+    @include('frontend.process', ['is_index' => true])
+
     @include('frontend.blog', ['is_index' => true])
 
     @include('frontend.team', ['is_index' => true])
@@ -150,7 +152,8 @@
     .testimonial-card {
         background: #ffffff;
         border-radius: 24px;
-        padding: 2em 2em; /* Reduced vertical padding from 3em to 2em, horizontal from 2.5em to 2em */
+        padding: 2em 2em;
+        /* Reduced vertical padding from 3em to 2em, horizontal from 2.5em to 2em */
         position: relative;
         transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
         box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
@@ -159,9 +162,10 @@
         z-index: 1;
         display: flex;
         flex-direction: column;
-        height: 100%; /* Ensure equal heights if needed, but flex lets them grow naturally */
+        height: 100%;
+        /* Ensure equal heights if needed, but flex lets them grow naturally */
     }
-    
+
     .testimonial-card .card-bg {
         position: absolute;
         top: 0;
@@ -179,7 +183,7 @@
         box-shadow: 0 20px 50px rgba(0, 77, 230, 0.12);
         border-color: rgba(0, 77, 230, 0.3);
     }
-    
+
     .testimonial-card:hover .card-bg {
         opacity: 1;
     }
@@ -188,7 +192,8 @@
         display: flex;
         align-items: center;
         gap: 1.5em;
-        margin-bottom: 1.5em; /* Reduced from 2em */
+        margin-bottom: 1.5em;
+        /* Reduced from 2em */
         position: relative;
     }
 
@@ -242,7 +247,8 @@
     }
 
     .rating {
-        margin-bottom: 1em; /* Reduced from 1.5em */
+        margin-bottom: 1em;
+        /* Reduced from 1.5em */
         color: #fbbf24;
         font-size: 1.1em;
         display: flex;
@@ -260,11 +266,13 @@
 
     @media screen and (max-width: 980px) {
         .testimonials-grid {
-             grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
         }
+
         .testimonial-card {
             padding: 1.5em 1.5em;
         }
+
         .premium-testimonials header.major h2 {
             font-size: 2.2em;
         }
@@ -275,12 +283,15 @@
             grid-template-columns: 1fr;
             gap: 2em;
         }
+
         .testimonial-card {
             padding: 2em 1.5em;
         }
+
         .quote-icon {
             font-size: 2em;
         }
+
         .premium-testimonials header.major h2 {
             font-size: 2em;
         }

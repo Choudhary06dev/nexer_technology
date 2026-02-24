@@ -10,10 +10,11 @@
     <nav class="desktop-nav">
         <ul>
             <li> <a href="{{ url('/') }}">Home</a> </li>
+            <li> <a href="{{ url('/#about') }}">About</a> </li>
+            <li> <a href="{{ url('/#process') }}">Process</a> </li>
             <li> <a href="{{ url('/#blog') }}">Blog</a> </li>
-            <li> <a href="{{ url('/#about') }}">About Us</a> </li>
-            <li> <a href="{{ url('/#team') }}">Authors</a> </li>
-            <li> <a href="{{ url('/#contact') }}">Contact Us</a> </li>
+            <li> <a href="{{ url('/#team') }}">Team</a> </li>
+            <li> <a href="{{ url('/#contact') }}">Contact</a> </li>
         </ul>
     </nav>
 
