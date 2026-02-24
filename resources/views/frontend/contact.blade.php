@@ -275,12 +275,11 @@
         padding: 40px 2em 20px;
     }
 
-    /* ===== INFO STRIP ===== */
     .contact-info-strip {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 1.2em;
-        max-width: 1100px;
+        max-width: 1280px;
         margin: 0 auto 3em;
     }
 
@@ -344,12 +343,11 @@
         color: #6366f1;
     }
 
-    /* ===== BODY GRID ===== */
     .contact-body-grid {
         display: grid;
         grid-template-columns: 1fr 420px;
         gap: 2em;
-        max-width: 1100px;
+        max-width: 1280px;
         margin: 0 auto;
     }
 

@@ -99,45 +99,93 @@
                 Our Expertise
             </div>
             <h2 class="about-headline about-headline--center ao-fade-up">
-                What We <span class="gradient-text">Deliver</span>
+                What We 
+                <span class="rotating-words">
+                    <span class="gradient-text">Deliver</span>
+                    <span class="gradient-text">Create</span>
+                    <span class="gradient-text">Build</span>
+                    <span class="gradient-text">Innovate</span>
+                    <span class="gradient-text">Deliver</span> <!-- Duplicate first for smooth loop -->
+                </span>
             </h2>
 
-            <div class="features-grid-modern">
-                <div class="fcard ao-fade-up" style="animation-delay: 0.05s">
-                    <div class="fcard-icon"><i class="fa fa-code"></i></div>
-                    <h3>Software Development</h3>
-                    <p>Scalable custom software designed to solve complex business challenges with modern tech stacks.</p>
-                    <div class="fcard-line"></div>
-                </div>
-                <div class="fcard ao-fade-up" style="animation-delay: 0.12s">
-                    <div class="fcard-icon"><i class="fa fa-laptop"></i></div>
-                    <h3>Web &amp; App Solutions</h3>
-                    <p>Responsive web platforms and high-performance mobile apps for iOS and Android.</p>
-                    <div class="fcard-line"></div>
-                </div>
-                <div class="fcard ao-fade-up" style="animation-delay: 0.19s">
-                    <div class="fcard-icon"><i class="fa fa-paint-brush"></i></div>
-                    <h3>UI/UX Design</h3>
-                    <p>User-centric design that prioritizes accessibility, aesthetics, and seamless interactions.</p>
-                    <div class="fcard-line"></div>
-                </div>
-                <div class="fcard ao-fade-up" style="animation-delay: 0.26s">
-                    <div class="fcard-icon"><i class="fa fa-cloud"></i></div>
-                    <h3>Cloud Solutions</h3>
-                    <p>Robust cloud infrastructure and migration services to ensure your data is secure and scalable.</p>
-                    <div class="fcard-line"></div>
-                </div>
-                <div class="fcard ao-fade-up" style="animation-delay: 0.33s">
-                    <div class="fcard-icon"><i class="fa fa-plug"></i></div>
-                    <h3>API Integration</h3>
-                    <p>Connecting your systems seamlessly for improved data flow and operational efficiency.</p>
-                    <div class="fcard-line"></div>
-                </div>
-                <div class="fcard ao-fade-up" style="animation-delay: 0.40s">
-                    <div class="fcard-icon"><i class="fa fa-wrench"></i></div>
-                    <h3>Maintenance</h3>
-                    <p>Ongoing support and modernization to keep your digital assets running at peak performance.</p>
-                    <div class="fcard-line"></div>
+            <div class="features-slider-container">
+                <div class="features-slider-track">
+                    <!-- Original Items -->
+                    <div class="fcard ao-fade-up">
+                        <div class="fcard-icon"><i class="fa fa-code"></i></div>
+                        <h3>Software Development</h3>
+                        <p>Scalable custom software designed to solve complex business challenges with modern tech stacks.</p>
+                        <div class="fcard-line"></div>
+                    </div>
+                    <div class="fcard ao-fade-up">
+                        <div class="fcard-icon"><i class="fa fa-laptop"></i></div>
+                        <h3>Web &amp; App Solutions</h3>
+                        <p>Responsive web platforms and high-performance mobile apps for iOS and Android.</p>
+                        <div class="fcard-line"></div>
+                    </div>
+                    <div class="fcard ao-fade-up">
+                        <div class="fcard-icon"><i class="fa fa-paint-brush"></i></div>
+                        <h3>UI/UX Design</h3>
+                        <p>User-centric design that prioritizes accessibility, aesthetics, and seamless interactions.</p>
+                        <div class="fcard-line"></div>
+                    </div>
+                    <div class="fcard ao-fade-up">
+                        <div class="fcard-icon"><i class="fa fa-cloud"></i></div>
+                        <h3>Cloud Solutions</h3>
+                        <p>Robust cloud infrastructure and migration services to ensure your data is secure and scalable.</p>
+                        <div class="fcard-line"></div>
+                    </div>
+                    <div class="fcard ao-fade-up">
+                        <div class="fcard-icon"><i class="fa fa-plug"></i></div>
+                        <h3>API Integration</h3>
+                        <p>Connecting your systems seamlessly for improved data flow and operational efficiency.</p>
+                        <div class="fcard-line"></div>
+                    </div>
+                    <div class="fcard ao-fade-up">
+                        <div class="fcard-icon"><i class="fa fa-wrench"></i></div>
+                        <h3>Maintenance</h3>
+                        <p>Ongoing support and modernization to keep your digital assets running at peak performance.</p>
+                        <div class="fcard-line"></div>
+                    </div>
+                    
+                    <!-- Duplicated Items for Seamless Infinite Scroll -->
+                    <div class="fcard ao-fade-up">
+                        <div class="fcard-icon"><i class="fa fa-code"></i></div>
+                        <h3>Software Development</h3>
+                        <p>Scalable custom software designed to solve complex business challenges with modern tech stacks.</p>
+                        <div class="fcard-line"></div>
+                    </div>
+                    <div class="fcard ao-fade-up">
+                        <div class="fcard-icon"><i class="fa fa-laptop"></i></div>
+                        <h3>Web &amp; App Solutions</h3>
+                        <p>Responsive web platforms and high-performance mobile apps for iOS and Android.</p>
+                        <div class="fcard-line"></div>
+                    </div>
+                    <div class="fcard ao-fade-up">
+                        <div class="fcard-icon"><i class="fa fa-paint-brush"></i></div>
+                        <h3>UI/UX Design</h3>
+                        <p>User-centric design that prioritizes accessibility, aesthetics, and seamless interactions.</p>
+                        <div class="fcard-line"></div>
+                    </div>
+                    <div class="fcard ao-fade-up">
+                        <div class="fcard-icon"><i class="fa fa-cloud"></i></div>
+                        <h3>Cloud Solutions</h3>
+                        <p>Robust cloud infrastructure and migration services to ensure your data is secure and scalable.</p>
+                        <div class="fcard-line"></div>
+                    </div>
+                    <div class="fcard ao-fade-up">
+                        <div class="fcard-icon"><i class="fa fa-plug"></i></div>
+                        <h3>API Integration</h3>
+                        <p>Connecting your systems seamlessly for improved data flow and operational efficiency.</p>
+                        <div class="fcard-line"></div>
+                    </div>
+                    <div class="fcard ao-fade-up">
+                        <div class="fcard-icon"><i class="fa fa-wrench"></i></div>
+                        <h3>Maintenance</h3>
+                        <p>Ongoing support and modernization to keep your digital assets running at peak performance.</p>
+                        <div class="fcard-line"></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -218,6 +266,30 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+}
+
+/* Rotating Words Animation */
+.rotating-words {
+    display: inline-flex;
+    flex-direction: column;
+    height: 1.15em; /* Match line height of heading */
+    overflow: hidden;
+    vertical-align: bottom;
+}
+
+.rotating-words span {
+    display: block;
+    height: 100%;
+    line-height: 1.15;
+    animation: rotate-words-anim 10s infinite cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes rotate-words-anim {
+    0%, 15% { transform: translateY(0); }
+    25%, 40% { transform: translateY(-100%); }
+    50%, 65% { transform: translateY(-200%); }
+    75%, 90% { transform: translateY(-300%); }
+    100% { transform: translateY(-400%); }
 }
 
 /* Content grid */
@@ -357,21 +429,41 @@
     background: #f8fafc;
 }
 
-.features-grid-modern {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5em;
-    margin-top: 3em;
+.features-slider-container {
+    overflow: hidden;
+    padding: 2em 0;
+    margin-top: 2em;
+    position: relative;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+}
+
+.features-slider-track {
+    display: flex;
+    gap: 2em;
+    width: max-content;
+    animation: scroll-features 35s linear infinite;
+}
+
+.features-slider-track:hover {
+    animation-play-state: paused;
+}
+
+@keyframes scroll-features {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-50% - 1em)); }
 }
 
 /* Feature cards */
 .fcard {
-    background: #ffffff;
+    background: #0f172a;
     border-radius: 20px;
-    padding: 2em 1.8em;
-    border: 1px solid #e2e8f0;
+    padding: 2.5em 2.2em;
+    border: 1px solid rgba(255, 255, 255, 0.05);
     position: relative;
     overflow: hidden;
+    width: 380px; /* Fixed width for slider items */
+    flex-shrink: 0;
     transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
                 box-shadow 0.35s ease,
                 border-color 0.35s ease;
@@ -390,8 +482,8 @@
 
 .fcard:hover {
     transform: translateY(-8px);
-    box-shadow: 0 20px 50px rgba(0, 77, 230, 0.12);
-    border-color: rgba(0, 77, 230, 0.15);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+    border-color: rgba(99, 102, 241, 0.3);
 }
 
 .fcard:hover::before {
@@ -419,16 +511,17 @@
 }
 
 .fcard h3 {
-    font-size: 1.05em !important;
+    font-size: 1.15em !important;
     font-weight: 700 !important;
-    color: #0f172a !important;
+    color: #ffffff !important;
     margin-bottom: 0.6em !important;
+    letter-spacing: 0.5px;
 }
 
 .fcard p {
-    font-size: 0.88em !important;
+    font-size: 0.9em !important;
     line-height: 1.7 !important;
-    color: #64748b !important;
+    color: #94a3b8 !important;
     margin: 0 !important;
 }
 
