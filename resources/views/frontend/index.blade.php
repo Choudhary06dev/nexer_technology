@@ -79,7 +79,6 @@
 @endsection
 
 @push('styles')
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@24.5.2/build/css/intlTelInput.css">
 <style>
     #main section {
         padding: 2em 0;
@@ -208,31 +207,8 @@
 @endpush
 
 @push('scripts')
-<script src="https://cdn.jsdelivr.net/npm/intl-tel-input@24.5.2/build/js/intlTelInput.min.js"></script>
 <script>
     document.addEventListener('DOMContentLoaded', function() {
-        const input = document.querySelector("#phone");
-        const fullPhoneInput = document.querySelector("#full_phone");
-        const iti = window.intlTelInput(input, {
-            initialCountry: "pk",
-            separateDialCode: true,
-            utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@24.5.2/build/js/utils.js",
-        });
-
-        input.addEventListener('change', function() {
-            fullPhoneInput.value = iti.getNumber();
-        });
-
-        // Restrict to numbers only
-        input.addEventListener('input', function() {
-            this.value = this.value.replace(/[^0-9]/g, '');
-            fullPhoneInput.value = iti.getNumber();
-        });
-
-        document.querySelector('form').addEventListener('submit', function() {
-            fullPhoneInput.value = iti.getNumber();
-        });
-
         // Smooth scrolling for anchor links (with fixed header offset)
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {

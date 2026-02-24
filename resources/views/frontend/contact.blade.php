@@ -97,11 +97,14 @@
 
                 <div class="form-two-col">
                     <div class="modern-field">
-                        <label for="phone">Phone Number</label>
+                        <label for="phone">Phone Number <span class="req">*</span></label>
                         <div class="field-wrap phone-wrap">
-                            <input type="tel" name="phone" id="phone" value="{{ old('phone') }}" />
+                            <i class="fa fa-phone field-icon"></i>
+                            <input type="tel" name="phone" id="phone" value="{{ old('phone') }}" required />
                         </div>
                         <input type="hidden" name="full_phone" id="full_phone" value="{{ old('full_phone') }}">
+                        <span id="phone-valid-msg" class="field-error" style="display:none; color: #22c55e;"><i class="fa fa-check-circle"></i> Valid Number</span>
+                        <span id="phone-error-msg" class="field-error" style="display:none;"><i class="fa fa-exclamation-circle"></i> Invalid Number</span>
                         @error('phone')<span class="field-error"><i class="fa fa-exclamation-circle"></i> {{ $message }}</span>@enderror
                     </div>
                     <div class="modern-field">
@@ -150,7 +153,7 @@
                 <h3>Follow Us</h3>
                 <p>Stay connected with us on social media for the latest updates and tech insights.</p>
                 <div class="social-links-grid">
-                    <a href="#" class="social-link-item linkedin"><i class="fa fa-linkedin"></i><span>LinkedIn</span></a>
+                    <a href="https://www.linkedin.com/company/nexer-technology-solutions" class="social-link-item linkedin"><i class="fa fa-linkedin"></i><span>LinkedIn</span></a>
                     <a href="#" class="social-link-item twitter"><i class="fa fa-twitter"></i><span>Twitter</span></a>
                     <a href="#" class="social-link-item facebook"><i class="fa fa-facebook"></i><span>Facebook</span></a>
                     <a href="#" class="social-link-item instagram"><i class="fa fa-instagram"></i><span>Instagram</span></a>
@@ -354,7 +357,7 @@
     .contact-form-card {
         background: #ffffff;
         border-radius: 20px;
-        padding: 1em 2.5em;
+        padding: 1.5em 2em;
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
         border: 1px solid #e2e8f0;
     }
@@ -385,6 +388,12 @@
         align-items: flex-start;
         gap: 1em;
         margin-bottom: 2em;
+        transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    }
+
+    .contact-success-alert.fade-out {
+        opacity: 0;
+        transform: translateY(-10px);
     }
 
     .contact-success-alert i {
@@ -409,19 +418,19 @@
     .contact-modern-form {
         display: flex;
         flex-direction: column;
-        gap: 1.4em;
+        gap: 1em;
     }
 
     .form-two-col {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 1.4em;
+        gap: 1em;
     }
 
     .modern-field {
         display: flex;
         flex-direction: column;
-        gap: 6px;
+        gap: 4px;
     }
 
     .modern-field label {
@@ -472,9 +481,9 @@
     }
 
     .field-wrap textarea {
-        padding: 13px 14px 13px 14px;
+        padding: 11px 14px;
         resize: vertical;
-        min-height: 130px;
+        min-height: 100px;
     }
 
     .field-wrap select {
@@ -510,8 +519,13 @@
         display: block !important;
     }
 
+    /* Move flag container to the right of our icon */
+    .phone-wrap .iti__flag-container {
+        left: 38px !important;
+    }
+
     .phone-wrap .iti input {
-        padding-left: 90px !important;
+        padding-left: 120px !important;
         border-radius: 12px !important;
     }
 
@@ -520,6 +534,7 @@
         color: #1e293b !important;
         border: 1px solid #e2e8f0 !important;
         border-radius: 10px !important;
+        z-index: 100 !important;
     }
 
     /* Submit */
@@ -539,8 +554,8 @@
         color: white;
         border: none;
         border-radius: 12px;
-        padding: 15px 35px;
-        font-size: 1em;
+        padding: 12px 28px;
+        font-size: 0.95em;
         font-weight: 700;
         cursor: pointer;
         transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -804,21 +819,57 @@
         // Phone Input
         const phoneInput = document.querySelector('#phone');
         const fullPhoneInput = document.querySelector('#full_phone');
-        if (phoneInput) {
+        const errorMsg = document.querySelector("#phone-error-msg");
+        const validMsg = document.querySelector("#phone-valid-msg");
+
+        if (phoneInput && fullPhoneInput) {
             const iti = window.intlTelInput(phoneInput, {
                 initialCountry: 'pk',
                 separateDialCode: true,
                 utilsScript: 'https://cdn.jsdelivr.net/npm/intl-tel-input@24.5.2/build/js/utils.js',
             });
+
+            const reset = () => {
+                phoneInput.classList.remove("error");
+                errorMsg.style.display = "none";
+                validMsg.style.display = "none";
+            };
+
+            const validate = () => {
+                reset();
+                if (phoneInput.value.trim()) {
+                    if (iti.isValidNumber()) {
+                        validMsg.style.display = "flex";
+                        fullPhoneInput.value = iti.getNumber();
+                    } else {
+                        phoneInput.classList.add("error");
+                        errorMsg.style.display = "flex";
+                    }
+                }
+            };
+
             const update = () => {
                 fullPhoneInput.value = iti.getNumber();
+                validate();
             };
+
             phoneInput.addEventListener('change', update);
+            phoneInput.addEventListener('keyup', update);
             phoneInput.addEventListener('input', () => {
                 phoneInput.value = phoneInput.value.replace(/[^0-9]/g, '');
                 update();
             });
-            document.querySelector('form').addEventListener('submit', update);
+
+            const mainForm = document.querySelector('form.contact-modern-form');
+            if (mainForm) {
+                mainForm.addEventListener('submit', function(e) {
+                    update();
+                    if (!iti.isValidNumber() && phoneInput.value.trim() !== '') {
+                        e.preventDefault();
+                        validate();
+                    }
+                });
+            }
         }
 
         // Submit button loading state
@@ -830,6 +881,17 @@
                 const label = submitBtn.querySelector('.btn-label');
                 if (label) label.textContent = 'Sending...';
             });
+        }
+
+        // Success Message Auto-hide
+        const successAlert = document.querySelector('.contact-success-alert');
+        if (successAlert) {
+            setTimeout(() => {
+                successAlert.classList.add('fade-out');
+                setTimeout(() => {
+                    successAlert.style.display = 'none';
+                }, 500); // Wait for CSS transition
+            }, 5000); // 5 seconds
         }
     });
 </script>
