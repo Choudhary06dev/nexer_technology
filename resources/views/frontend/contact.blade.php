@@ -62,7 +62,6 @@
         <div class="contact-form-card">
             <div class="form-card-header">
                 <h2>Send a Message</h2>
-                <p>Fill out the form below and our team will reach out soon.</p>
             </div>
 
             @if(session('success'))
@@ -130,7 +129,6 @@
                         <span class="btn-label">Send Message</span>
                         <span class="btn-icon"><i class="fa fa-paper-plane"></i></span>
                     </button>
-                    <p class="form-note"><i class="fa fa-lock"></i> Your information is 100% secure.</p>
                 </div>
             </form>
         </div>
@@ -305,7 +303,7 @@
         width: 48px;
         height: 48px;
         background: linear-gradient(135deg, #6366f1, #818cf8);
-        border-radius: 12px;
+        border-radius: 35px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -356,7 +354,7 @@
     .contact-form-card {
         background: #ffffff;
         border-radius: 20px;
-        padding: 2.5em;
+        padding: 1em 2.5em;
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
         border: 1px solid #e2e8f0;
     }
