@@ -7,8 +7,8 @@
         <div class="footer-grid">
             <!-- About Section -->
             <div class="footer-col ao-fade-up">
-                <h3>About Nexer</h3>
-                <p>Nexer Technology is expert in providing scaleable and flexible customized ERP solutions and Data security solutions based on PKI and Cryptography that help businesses unlock their true potential with security and reliability.</p>
+                <h3>About Nexer Tech Solutions</h3>
+                <p>Nexer Tech Solutions is expert in providing scaleable and flexible customized ERP solutions and Data security solutions based on PKI and Cryptography that help businesses unlock their true potential with security and reliability.</p>
             </div>
 
             <!-- Company Section -->
@@ -18,8 +18,8 @@
                     <li><a href="{{ route('about') }}">About Us</a></li>
                     <li><a href="{{ route('authors') }}">Team</a></li>
                     <li><a href="{{ route('home') }}#testimonials">Customers</a></li>
-                    <li><a href="{{ route('contact') }}">Jobs</a></li>
-                    <li><a href="{{ route('blog') }}">Blog</a></li>
+                    <li><a href="{{ url('/#blog') }}">Blog</a></li>
+                    <li><a href="{{ url('/#contact') }}">Contact Us</a></li>
                 </ul>
             </div>
 
@@ -40,7 +40,7 @@
                 <h3>Help & Support</h3>
                 <ul>
                     <li><a href="#">Help Center</a></li>
-                    <li><a href="{{ route('contact') }}">Contact Us</a></li>
+                    <li><a href="{{ url('/#contact') }}">Contact Us</a></li>
                     <li><a href="#">Live Chat</a></li>
                     <li><a href="#">Terms of Services</a></li>
                     <li><a href="#">Privacy Policy</a></li>
@@ -49,7 +49,7 @@
         </div>
 
         <div class="copyright-bar ao-fade-up">
-            &copy; Copyright 2026 - Nexer Technology
+            &copy; Copyright 2020 - Nexer Tech Solutions
             <a href="#" class="back-to-top" id="backToTop">
                 <i class="fa fa-arrow-up"></i>
             </a>

@@ -310,8 +310,8 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background-size: 100% 100% !important;
-        background-position: center !important;
+        background-size: cover !important;
+        background-position: center center !important;
         background-repeat: no-repeat !important;
         z-index: 0;
     }
@@ -342,10 +342,10 @@
                 if (targetId === '#') return;
                 const targetElement = document.querySelector(targetId);
                 if (targetElement) {
-                    const headerHeight = document.getElementById('header')?.offsetHeight || 80;
+                    const headerHeight = document.getElementById('header')?.offsetHeight || 90;
                     const elementTop = targetElement.getBoundingClientRect().top + window.scrollY;
                     window.scrollTo({
-                        top: elementTop - 50, // Reduced to 70px to scroll further down
+                        top: elementTop - headerHeight - 20, // Adjusted offset to clear the fixed header
                         behavior: 'smooth'
                     });
                 }

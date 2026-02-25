@@ -105,9 +105,80 @@
             opacity: 0.8;
         }
 
+        /* Mobile Menu Styles */
+        .mobile-menu-btn {
+            display: none;
+            cursor: pointer;
+            font-size: 1.5em;
+            color: #004de6;
+            margin-right: 20px;
+        }
+
+        #header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: white;
+            z-index: 1000;
+        }
+
+        #header .logo {
+            margin-left: 20px;
+        }
+
+        @media (max-width: 980px) {
+            .mobile-menu-btn {
+                display: block !important;
+                position: relative;
+                z-index: 10001;
+            }
+
+            #header nav.desktop-nav {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: white;
+                box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+                display: none !important; /* hidden by default on mobile */
+                flex-direction: column;
+                padding: 10px 0;
+            }
+
+            #header nav.desktop-nav.active {
+                display: flex !important;
+            }
+
+            #header nav ul {
+                flex-direction: column;
+                gap: 0;
+                padding: 0;
+                margin: 0;
+                list-style: none;
+            }
+
+            #header nav ul li {
+                width: 100%;
+                text-align: center;
+                margin: 0;
+                padding: 0;
+            }
+
+            #header nav ul li a,
+            .modern-header nav ul li a {
+                display: block;
+                padding: 15px;
+                border-bottom: 1px solid #f1f5f9;
+            }
+
+            #header nav ul li:last-child a {
+                border-bottom: none;
+            }
+        }
+
         /* Footer Compression */
         #footer {
-            padding: 0.5em 0 0 !important;
+            padding: 2.5em 0 0 !important; /* Increased top padding to move logo down */
             margin-bottom: 0 !important;
             flex-shrink: 0;
             margin-top: 3em !important;
@@ -151,8 +222,8 @@
         }
 
         #footer .copyright-bar {
-            padding-top: 0.5em !important;
-            padding-bottom: 0 !important;
+            padding-top: 1.5em !important;
+            padding-bottom: 1em !important;
             margin-bottom: 0 !important;
             font-size: 0.75em !important;
             border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
@@ -180,6 +251,25 @@
 
         #footer {
             background-color: #1a1a1a !important;
+        }
+
+        @media (max-width: 736px) {
+            .footer-grid {
+                display: grid !important;
+                grid-template-columns: 1fr 1fr !important;
+                gap: 2em 1em !important;
+            }
+            .footer-col {
+                flex: none !important;
+                margin: 0 !important;
+                min-width: 0 !important;
+                width: 100% !important;
+            }
+            .footer-col:first-child,
+            .footer-col:last-child {
+                grid-column: span 2;
+                max-width: 100% !important;
+            }
         }
     </style>
 </head>

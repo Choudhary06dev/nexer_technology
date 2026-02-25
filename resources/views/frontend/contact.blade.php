@@ -719,9 +719,11 @@
         color: #0077b5;
     }
 
-    .social-link-item.linkedin:hover {
+    .social-link-item.linkedin:hover,
+    .social-link-item.linkedin:hover span,
+    .social-link-item.linkedin:hover i {
         background: #0077b5;
-        color: white;
+        color: #ffffff !important;
     }
 
     .social-link-item.twitter {

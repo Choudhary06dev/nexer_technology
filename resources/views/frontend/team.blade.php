@@ -17,7 +17,7 @@
 @endif
 
 <!-- Team Section -->
-<section id="team" class="main" style="padding-top: 0.5em !important; padding-bottom: 0.5em !important;">
+<section id="team" class="main" style="padding-top: 3em !important; padding-bottom: 0.5em !important;">
     <div class="inner">
         <header class="major text-center ao-fade-up">
             <h2>Our Leadership</h2>
@@ -35,8 +35,8 @@
                     </div>
                 </div>
                 <div class="member-info">
-                    <h3>Johnny William</h3>
-                    <h4>Chief Executive Officer</h4>
+                    <h3>Sher Khan</h3>
+                    <h4>Admin Officer</h4>
                 </div>
             </div>
 
@@ -45,14 +45,14 @@
                     <img src="{{ asset('images/author-image-2-646x680.jpg') }}" alt="Karry Pitcher">
                     <div class="member-overlay">
                         <div class="social-links">
-                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                            <a href="https://www.linkedin.com/in/amjad-subhani"><i class="fa fa-linkedin"></i></a>
                             <a href="#"><i class="fa fa-twitter"></i></a>
                         </div>
                     </div>
                 </div>
                 <div class="member-info">
-                    <h3>Karry Pitcher</h3>
-                    <h4>Chief Technology Officer</h4>
+                    <h3>Amjad Subhani</h3>
+                    <h4>Software Developer</h4>
                 </div>
             </div>
 
@@ -61,14 +61,14 @@
                     <img src="{{ asset('images/author-image-3-646x680.jpg') }}" alt="Mary Cool">
                     <div class="member-overlay">
                         <div class="social-links">
-                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                            <a href="https://www.linkedin.com/in/msaeedofficial"><i class="fa fa-linkedin"></i></a>
                             <a href="#"><i class="fa fa-twitter"></i></a>
                         </div>
                     </div>
                 </div>
                 <div class="member-info">
-                    <h3>Mary Cool</h3>
-                    <h4>Head of Design</h4>
+                    <h3>Ahmad Saeed</h3>
+                    <h4>Web Developer</h4>
                 </div>
             </div>
 
@@ -83,8 +83,8 @@
                     </div>
                 </div>
                 <div class="member-info">
-                    <h3>Michael Soft</h3>
-                    <h4>Lead Architect</h4>
+                    <h3>Afaq Tahir</h3>
+                    <h4>Sr. Laravel Developer</h4>
                 </div>
             </div>
         </div>
