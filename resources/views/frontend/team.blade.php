@@ -19,12 +19,12 @@
 <!-- Team Section -->
 <section id="team" class="main" style="padding-top: 0.5em !important; padding-bottom: 0.5em !important;">
     <div class="inner">
-        <header class="major text-center">
+        <header class="major text-center ao-fade-up">
             <h2>Our Leadership</h2>
         </header>
 
         <div class="team-grid">
-            <div class="team-card">
+            <div class="team-card ao-fade-up">
                 <div class="member-img">
                     <img src="{{ asset('images/author-image-1-646x680.jpg') }}" alt="Johnny William">
                     <div class="member-overlay">
@@ -40,7 +40,7 @@
                 </div>
             </div>
 
-            <div class="team-card">
+            <div class="team-card ao-fade-up">
                 <div class="member-img">
                     <img src="{{ asset('images/author-image-2-646x680.jpg') }}" alt="Karry Pitcher">
                     <div class="member-overlay">
@@ -56,7 +56,7 @@
                 </div>
             </div>
 
-            <div class="team-card">
+            <div class="team-card ao-fade-up">
                 <div class="member-img">
                     <img src="{{ asset('images/author-image-3-646x680.jpg') }}" alt="Mary Cool">
                     <div class="member-overlay">
@@ -72,7 +72,7 @@
                 </div>
             </div>
 
-            <div class="team-card">
+            <div class="team-card ao-fade-up">
                 <div class="member-img">
                     <img src="{{ asset('images/author-image-4-646x680.jpg') }}" alt="Michael Soft">
                     <div class="member-overlay">

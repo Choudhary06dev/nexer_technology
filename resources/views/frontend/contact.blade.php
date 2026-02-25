@@ -28,28 +28,28 @@
 
     <!-- Info Cards Row -->
     <div class="contact-info-strip">
-        <div class="contact-info-card">
+        <div class="contact-info-card ao-fade-up">
             <div class="contact-info-icon"><i class="fa fa-envelope"></i></div>
             <div class="contact-info-text">
                 <span class="info-label">Email Us</span>
                 <a href="mailto:manager@nexersol.com">manager@nexersol.com</a>
             </div>
         </div>
-        <div class="contact-info-card">
+        <div class="contact-info-card ao-fade-up">
             <div class="contact-info-icon"><i class="fa fa-phone"></i></div>
             <div class="contact-info-text">
                 <span class="info-label">Call Us</span>
                 <a href="tel:+923084992485">+92 308 4992485</a>
             </div>
         </div>
-        <div class="contact-info-card">
+        <div class="contact-info-card ao-fade-up">
             <div class="contact-info-icon"><i class="fa fa-map-marker"></i></div>
             <div class="contact-info-text">
                 <span class="info-label">Visit Us</span>
                 <span>915 High Q Tower, Gulberg V, Lahore</span>
             </div>
         </div>
-        <div class="contact-info-card">
+        <div class="contact-info-card ao-fade-up">
             <div class="contact-info-icon"><i class="fa fa-clock-o"></i></div>
             <div class="contact-info-text">
                 <span class="info-label">Working Hours</span>
@@ -62,7 +62,7 @@
     <div class="contact-body-grid">
 
         <!-- Form -->
-        <div class="contact-form-card">
+        <div class="contact-form-card ao-slide-left">
             <div class="form-card-header">
                 <h2>Send a Message</h2>
             </div>
@@ -140,7 +140,7 @@
         </div>
 
         <!-- Right Side: Map + Socials -->
-        <div class="contact-right-col">
+        <div class="contact-right-col ao-slide-right">
             <!-- Google Map -->
             <div class="contact-map-card">
                 <div class="map-header"><i class="fa fa-map-o"></i> Find Us Here</div>

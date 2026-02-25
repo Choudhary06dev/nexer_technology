@@ -36,13 +36,13 @@
     <!-- Testimonials -->
     <section id="testimonials" class="premium-testimonials">
         <div class="inner">
-            <header class="major text-center" style="margin-left: auto; margin-right: auto;">
+            <header class="major text-center ao-fade-up" style="margin-left: auto; margin-right: auto;">
                 <h2>What <span class="highlight">Our Clients</span> Say</h2>
                 <p>Real feedback from businesses we've helped transform</p>
             </header>
             <div class="testimonials-grid">
                 <!-- Testimonial 1 -->
-                <div class="testimonial-card">
+                <div class="testimonial-card ao-fade-up">
                     <div class="card-bg"></div>
                     <div class="quote-header">
                         <div class="client-avatar">
@@ -61,7 +61,7 @@
                 </div>
 
                 <!-- Testimonial 2 -->
-                <div class="testimonial-card">
+                <div class="testimonial-card ao-fade-up">
                     <div class="card-bg"></div>
                     <div class="quote-header">
                         <div class="client-avatar">
