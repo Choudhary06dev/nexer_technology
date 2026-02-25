@@ -26,7 +26,7 @@
         <div class="team-grid">
             <div class="team-card ao-fade-up">
                 <div class="member-img">
-                    <img src="{{ asset('images/author-image-1-646x680.jpg') }}" alt="Johnny William">
+                    <img src="{{ asset('images/author-image-1-646x680.jpg') }}" alt="Sher Khan" style="object-position: top center; object-fit: cover; width: 100%; height: 100%;">
                     <div class="member-overlay">
                         <div class="social-links">
                             <a href="#"><i class="fa fa-linkedin"></i></a>
