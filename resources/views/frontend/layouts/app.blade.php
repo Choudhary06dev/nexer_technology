@@ -15,17 +15,22 @@
     @stack('styles')
     <style>
         /* Fix for fixed header covering anchor sections */
-        html,
+        html {
+            overflow-x: hidden !important;
+            overflow-y: auto !important;
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+
         body {
             scroll-padding-top: 28px;
             /* Offset for fixed header height */
             margin: 0 !important;
             padding: 0 !important;
-            height: 100%;
             width: 100%;
-            overflow-x: hidden !important;
+            /* overflow-x: hidden !important; */
             background-color: #1a1a1a !important;
-            /* Hide any small gaps */
+            position: relative;
         }
 
         #wrapper {
@@ -37,14 +42,12 @@
             padding-bottom: 0 !important;
             width: 100%;
             max-width: 100%;
-            overflow-x: hidden !important;
         }
 
         #wrapper>* {
             flex-shrink: 0;
             width: 100%;
             max-width: 100%;
-            overflow-x: hidden !important;
         }
 
         /* Yielded content should grow but not force footer away */
