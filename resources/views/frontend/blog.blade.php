@@ -475,21 +475,18 @@
             .section-header-modern h2.circular-hover .word {
                 display: inline-block;
                 transition: color 0.3s;
+                animation: circularFloat 3s infinite linear;
             }
 
             .section-header-modern h2.circular-hover .word.accent {
                 color: #6366f1;
             }
 
-            .section-header-modern h2.circular-hover:hover .word {
-                animation: circularFloat 3s infinite linear;
-            }
-
-            .section-header-modern h2.circular-hover:hover .word:nth-child(2) {
+            .section-header-modern h2.circular-hover .word:nth-child(2) {
                 animation-delay: 0.5s;
             }
 
-            .section-header-modern h2.circular-hover:hover .word:nth-child(3) {
+            .section-header-modern h2.circular-hover .word:nth-child(3) {
                 animation-delay: 1s;
             }
 
