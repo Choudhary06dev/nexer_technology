@@ -428,12 +428,12 @@
             /* ===== MAIN SECTION ===== */
             .blog-section-ultra {
                 background: #fdfdff;
-                padding: 100px 0;
+                padding: 100px 0 30px !important;
                 position: relative;
             }
 
             .blog-section-ultra.index-mode {
-                padding: 60px 0 100px;
+                padding: 60px 0 30px !important;
             }
 
             .container-premium {

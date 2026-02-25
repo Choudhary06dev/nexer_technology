@@ -146,7 +146,7 @@
                 <div class="map-header"><i class="fa fa-map-o"></i> Find Us Here</div>
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3401.404878699565!2d74.34286331512225!3d31.51754018138927!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39190483b7d80dd7%3A0x856d3f5c4f5e41c7!2sGulberg%20V%2C%20Lahore%2C%20Punjab%2C%20Pakistan!5e0!3m2!1sen!2s!4v1620000000000!5m2!1sen!2s"
-                    width="100%" height="260" style="border:0;" allowfullscreen="" loading="lazy"
+                    width="100%" height="280" style="border:0;" allowfullscreen="" loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade" title="Nexer Technology Office Location">
                 </iframe>
             </div>
@@ -358,13 +358,18 @@
     .contact-form-card {
         background: #ffffff;
         border-radius: 20px;
-        padding: 1.5em 2em;
+        padding: 1.25em 2em;
+        /* Compressed from 1.5em */
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
         border: 1px solid #e2e8f0;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
     }
 
     .form-card-header {
-        margin-bottom: 2em;
+        margin-bottom: 1.2em;
+        /* Compressed from 2em */
     }
 
     .form-card-header h2 {
@@ -419,13 +424,17 @@
     .contact-modern-form {
         display: flex;
         flex-direction: column;
-        gap: 1em;
+        gap: 0.85em;
+        /* Compressed from 1em */
+        flex-grow: 1;
+        justify-content: center;
     }
 
     .form-two-col {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 1em;
+        gap: 0.85em;
+        /* Compressed from 1em */
     }
 
     .modern-field {
@@ -627,6 +636,9 @@
         display: flex;
         flex-direction: column;
         gap: 1.5em;
+        height: 100%;
+        justify-content: space-between;
+        /* Ensures map and socials fill the height */
     }
 
     /* Map Card */

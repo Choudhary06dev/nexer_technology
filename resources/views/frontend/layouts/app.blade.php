@@ -15,9 +15,51 @@
     @stack('styles')
     <style>
         /* Fix for fixed header covering anchor sections */
-        html {
+        html,
+        body {
             scroll-padding-top: 28px;
             /* Offset for fixed header height */
+            margin: 0 !important;
+            padding: 0 !important;
+            height: 100%;
+            width: 100%;
+            overflow-x: hidden !important;
+            background-color: #1a1a1a !important;
+            /* Hide any small gaps */
+        }
+
+        #wrapper {
+            display: flex;
+            flex-direction: column;
+            background-color: #ffffff;
+            /* Default background */
+            margin-bottom: 0 !important;
+            padding-bottom: 0 !important;
+            width: 100%;
+            max-width: 100%;
+            overflow-x: hidden !important;
+        }
+
+        #wrapper>* {
+            flex-shrink: 0;
+            width: 100%;
+            max-width: 100%;
+            overflow-x: hidden !important;
+        }
+
+        /* Yielded content should grow but not force footer away */
+        #main,
+        .main-content,
+        section[id],
+        section {
+            flex-grow: 1;
+            padding-bottom: 0 !important;
+            margin-bottom: 0 !important;
+        }
+
+        #main>section:last-child {
+            padding-bottom: 0 !important;
+            margin-bottom: 0 !important;
         }
 
         section[id],
@@ -62,8 +104,11 @@
 
         /* Footer Compression */
         #footer {
-            padding: 1.5em 0 0.5em 0 !important;
-            /* Reduced top/bottom padding */
+            padding: 0.5em 0 0 !important;
+            margin-bottom: 0 !important;
+            flex-shrink: 0;
+            margin-top: 3em !important;
+            /* Added space above footer */
         }
 
         #footer .inner {
@@ -104,7 +149,34 @@
 
         #footer .copyright-bar {
             padding-top: 0.5em !important;
+            padding-bottom: 0 !important;
+            margin-bottom: 0 !important;
             font-size: 0.75em !important;
+            border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+        }
+
+        /* Ensure nothing overflows its container */
+        img,
+        iframe,
+        video,
+        .box {
+            max-width: 100% !important;
+            height: auto;
+        }
+
+        /* Prevent phantom space from any source */
+        #wrapper::after,
+        body::after,
+        #footer::after {
+            display: none !important;
+            content: none !important;
+            height: 0 !important;
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+
+        #footer {
+            background-color: #1a1a1a !important;
         }
     </style>
 </head>
