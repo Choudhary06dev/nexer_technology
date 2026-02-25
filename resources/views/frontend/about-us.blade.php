@@ -37,7 +37,7 @@
                 <!-- Text Side -->
                 <div class="about-text-col ao-slide-left">
                     <p class="about-lead">
-                        Nexer Technology is a <strong>forward-thinking software development company</strong> committed to delivering innovative, scalable, and high-performance technology solutions for businesses across industries.
+                        Nexer Tech Solutions is a <strong>forward-thinking software development company</strong> committed to delivering innovative, scalable, and high-performance technology solutions for businesses across industries.
                     </p>
                     <p class="about-body">
                         Founded with a vision to drive digital transformation, we specialize in crafting custom software applications that empower organizations to thrive in a fast-evolving digital landscape.
