@@ -259,6 +259,7 @@
 
     .about-headline--center {
         text-align: center;
+        margin-bottom: 0 !important;
     }
 
     .gradient-text {
@@ -452,8 +453,8 @@
 
     .features-slider-container {
         overflow: hidden;
-        padding: 2em 0;
-        margin-top: 2em;
+        padding: 10px 0 40px 0;
+        margin-top: 3em;
         position: relative;
         width: 100vw;
         margin-left: calc(-50vw + 50%);

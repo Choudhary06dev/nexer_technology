@@ -6,13 +6,13 @@
         </div>
         <div class="footer-grid">
             <!-- About Section -->
-            <div class="footer-col">
+            <div class="footer-col ao-fade-up">
                 <h3>About Nexer</h3>
                 <p>Nexer Technology is expert in providing scaleable and flexible customized ERP solutions and Data security solutions based on PKI and Cryptography that help businesses unlock their true potential with security and reliability.</p>
             </div>
 
             <!-- Company Section -->
-            <div class="footer-col">
+            <div class="footer-col ao-fade-up">
                 <h3>Company</h3>
                 <ul>
                     <li><a href="{{ route('about') }}">About Us</a></li>
@@ -24,7 +24,7 @@
             </div>
 
             <!-- Services Section -->
-            <div class="footer-col">
+            <div class="footer-col ao-fade-up">
                 <h3>Services</h3>
                 <ul>
                     <li><a href="#">Web Design</a></li>
@@ -36,7 +36,7 @@
             </div>
 
             <!-- Help & Support Section -->
-            <div class="footer-col">
+            <div class="footer-col ao-fade-up">
                 <h3>Help & Support</h3>
                 <ul>
                     <li><a href="#">Help Center</a></li>
@@ -48,7 +48,7 @@
             </div>
         </div>
 
-        <div class="copyright-bar">
+        <div class="copyright-bar ao-fade-up">
             &copy; Copyright 2026 - Nexer Technology
             <a href="#" class="back-to-top" id="backToTop">
                 <i class="fa fa-arrow-up"></i>

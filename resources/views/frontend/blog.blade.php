@@ -43,7 +43,7 @@
     <div class="container-premium">
 
         @if(isset($is_index))
-        <header class="section-header-modern">
+        <header class="section-header-modern ao-fade-up">
             <div class="header-line"></div>
             <span class="sub-label">Knowledge Hub</span>
             <h2 class="circular-hover">
@@ -54,7 +54,7 @@
         </header>
         @else
         <!-- Featured Post - Only on Blog Page -->
-        <div class="featured-post-container">
+        <div class="featured-post-container ao-fade-up">
             <article class="featured-card">
                 <div class="featured-img">
                     <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=1200&auto=format&fit=crop" alt="AI Breakthrough">
@@ -81,7 +81,7 @@
 
         <div class="blog-grid-premium">
             <!-- Article 1 -->
-            <article class="glass-card">
+            <article class="glass-card ao-fade-up">
                 <div class="card-image-wrap">
                     <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=800&auto=format&fit=crop" alt="Software Development">
                     <div class="card-category-badge">Software Engineering</div>
@@ -101,7 +101,7 @@
             </article>
 
             <!-- Article 2 -->
-            <article class="glass-card">
+            <article class="glass-card ao-fade-up">
                 <div class="card-image-wrap">
                     <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=800&auto=format&fit=crop" alt="Web Solutions">
                     <div class="card-category-badge">Web & Apps</div>
@@ -121,7 +121,7 @@
             </article>
 
             <!-- Article 3 -->
-            <article class="glass-card">
+            <article class="glass-card ao-fade-up">
                 <div class="card-image-wrap">
                     <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=800&auto=format&fit=crop" alt="Cloud Tech">
                     <div class="card-category-badge">Cloud Tech</div>
@@ -143,7 +143,7 @@
             <!-- Hidden Posts Wrapper (Shown on click) -->
             <div id="hidden-blog-posts" style="display: none; grid-column: 1 / -1; grid-template-columns: repeat(3, 1fr); gap: 2.5em; width: 100%;">
                 <!-- Article 4 -->
-                <article class="glass-card">
+                <article class="glass-card ao-fade-up">
                     <div class="card-image-wrap">
                         <img src="https://images.unsplash.com/photo-1545235617-9465d2a55698?q=80&w=800&auto=format&fit=crop" alt="UI/UX Design">
                         <div class="card-category-badge">Experience Design</div>
@@ -163,7 +163,7 @@
                 </article>
 
                 <!-- Article 5 -->
-                <article class="glass-card">
+                <article class="glass-card ao-fade-up">
                     <div class="card-image-wrap">
                         <img src="https://images.unsplash.com/photo-1516259762381-22954d7d3ad2?q=80&w=800&auto=format&fit=crop" alt="API Systems">
                         <div class="card-category-badge">Integrations</div>
@@ -183,7 +183,7 @@
                 </article>
 
                 <!-- Article 6 -->
-                <article class="glass-card">
+                <article class="glass-card ao-fade-up">
                     <div class="card-image-wrap">
                         <img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?q=80&w=800&auto=format&fit=crop" alt="Startup Growth">
                         <div class="card-category-badge">Strategy</div>
@@ -205,7 +205,7 @@
         </div>
 
         <!-- Show More Buttons -->
-        <div class="blog-actions-center" style="margin-top: 30px; margin-bottom: 30px;">
+        <div class="blog-actions-center ao-fade-up" style="margin-top: 30px; margin-bottom: 30px;">
             <button id="show-more-btn" class="btn-all-insights">
                 View All Insights <i class="fa fa-chevron-down" style="margin-left: 8px;"></i>
             </button>
