@@ -69,7 +69,7 @@
                     <div class="author-row">
                         <img src="https://i.pravatar.cc/150?u=1" alt="Author">
                         <div class="author-info">
-                            <strong>Sarah Jenkins</strong>
+                            <strong>Sarah Khan</strong>
                             <span>Head of AI Research</span>
                         </div>
                     </div>
@@ -88,13 +88,13 @@
                 </div>
                 <div class="card-body-premium">
                     <div class="card-meta-pills">
-                        <span><i class="fa fa-calendar"></i> Oct 15, 2023</span>
+                        <span><i class="fa fa-calendar"></i> Dec 15, 2025</span>
                         <span><i class="fa fa-bolt"></i> Engineering</span>
                     </div>
                     <h3>Custom Software Development</h3>
                     <p>How we build scalable, high-performance software solutions tailored to solve unique business challenges across diverse industries.</p>
                     <div class="card-footer-premium">
-                        <div class="mini-author">By <span>Arsalan Khan</span></div>
+                        <div class="mini-author">By <span>Arslan Khan</span></div>
 
                     </div>
                 </div>
@@ -108,13 +108,13 @@
                 </div>
                 <div class="card-body-premium">
                     <div class="card-meta-pills">
-                        <span><i class="fa fa-calendar"></i> Oct 12, 2023</span>
+                        <span><i class="fa fa-calendar"></i> Feb 12, 2025</span>
                         <span><i class="fa fa-bolt"></i> Strategy</span>
                     </div>
                     <h3>Modern Web & App Solutions</h3>
                     <p>Crafting responsive web platforms and high-performance mobile applications that drive user engagement and business growth.</p>
                     <div class="card-footer-premium">
-                        <div class="mini-author">By <span>Emma Stone</span></div>
+                        <div class="mini-author">By <span>Ahmad Saeed</span></div>
 
                     </div>
                 </div>
@@ -128,13 +128,13 @@
                 </div>
                 <div class="card-body-premium">
                     <div class="card-meta-pills">
-                        <span><i class="fa fa-calendar"></i> Oct 08, 2023</span>
+                        <span><i class="fa fa-calendar"></i> Oct 08, 2024</span>
                         <span><i class="fa fa-bolt"></i> Infrastructure</span>
                     </div>
                     <h3>Cloud Infrastructure & Migration</h3>
                     <p>Ensuring your business is future-ready with robust cloud solutions designed for maximum scalability, security, and performance.</p>
                     <div class="card-footer-premium">
-                        <div class="mini-author">By <span>John Doe</span></div>
+                        <div class="mini-author">By <span>Saad Zafar</span></div>
 
                     </div>
                 </div>
@@ -150,13 +150,13 @@
                     </div>
                     <div class="card-body-premium">
                         <div class="card-meta-pills">
-                            <span><i class="fa fa-calendar"></i> Oct 05, 2023</span>
+                            <span><i class="fa fa-calendar"></i> Oct 05, 2025</span>
                             <span><i class="fa fa-bolt"></i> Security</span>
                         </div>
                         <h3>User-Centric UI/UX Design</h3>
                         <p>Why aesthetics and accessibility matter: Our approach to creating seamless digital experiences that users love to interact with.</p>
                         <div class="card-footer-premium">
-                            <div class="mini-author">By <span>Sarah J.</span></div>
+                            <div class="mini-author">By <span>Sarah Khan</span></div>
 
                         </div>
                     </div>
@@ -170,13 +170,13 @@
                     </div>
                     <div class="card-body-premium">
                         <div class="card-meta-pills">
-                            <span><i class="fa fa-calendar"></i> Oct 02, 2023</span>
+                            <span><i class="fa fa-calendar"></i> Oct 02, 2024</span>
                             <span><i class="fa fa-bolt"></i> Best Practice</span>
                         </div>
                         <h3>API Integration & Connectivity</h3>
                         <p>Connecting disparate systems to improve data flow, eliminate silos, and enhance overall operational efficiency for your business.</p>
                         <div class="card-footer-premium">
-                            <div class="mini-author">By <span>Mike Ross</span></div>
+                            <div class="mini-author">By <span>Aleena Khan</span></div>
 
                         </div>
                     </div>
@@ -190,13 +190,13 @@
                     </div>
                     <div class="card-body-premium">
                         <div class="card-meta-pills">
-                            <span><i class="fa fa-calendar"></i> Sep 28, 2023</span>
+                            <span><i class="fa fa-calendar"></i> Sep 28, 2025</span>
                             <span><i class="fa fa-bolt"></i> Innovation</span>
                         </div>
                         <h3>Building Scalable MVPs</h3>
                         <p>A strategic guide for startups on how to build and launch robust Minimum Viable Products that set the foundation for long-term success.</p>
                         <div class="card-footer-premium">
-                            <div class="mini-author">By <span>L. Specter</span></div>
+                            <div class="mini-author">By <span>Afaq Tahir</span></div>
 
                         </div>
                     </div>

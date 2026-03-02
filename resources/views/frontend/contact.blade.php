@@ -67,6 +67,14 @@
                 <h2>Send a Message</h2>
             </div>
 
+            <div id="ajax-success-alert" style="display:none;" class="contact-success-alert">
+                <i class="fa fa-check-circle"></i>
+                <div>
+                    <strong>Message Sent!</strong>
+                    <p id="ajax-success-message"></p>
+                </div>
+            </div>
+
             @if(session('success'))
             <div class="contact-success-alert">
                 <i class="fa fa-check-circle"></i>
@@ -103,7 +111,7 @@
                         <label for="phone">Phone Number <span class="req">*</span></label>
                         <div class="field-wrap phone-wrap">
                             <i class="fa fa-phone field-icon"></i>
-                            <input type="tel" name="phone" id="phone" value="{{ old('phone') }}" required />
+                            <input type="tel" name="phone" id="phone" value="{{ old('phone') }}" maxlength="11" inputmode="numeric" placeholder="03XXXXXXXXX" required />
                         </div>
                         <input type="hidden" name="full_phone" id="full_phone" value="{{ old('full_phone') }}">
                         <span id="phone-valid-msg" class="field-error" style="display:none; color: #22c55e;"><i class="fa fa-check-circle"></i> Valid Number</span>
@@ -831,82 +839,155 @@
 <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@24.5.2/build/js/intlTelInput.min.js"></script>
 <script>
     document.addEventListener('DOMContentLoaded', function() {
-        // Phone Input
+        // Phone Input UI Elements
         const phoneInput = document.querySelector('#phone');
         const fullPhoneInput = document.querySelector('#full_phone');
         const errorMsg = document.querySelector("#phone-error-msg");
         const validMsg = document.querySelector("#phone-valid-msg");
 
-        if (phoneInput && fullPhoneInput) {
-            const iti = window.intlTelInput(phoneInput, {
-                initialCountry: 'pk',
-                separateDialCode: true,
-                utilsScript: 'https://cdn.jsdelivr.net/npm/intl-tel-input@24.5.2/build/js/utils.js',
-            });
-
-            const reset = () => {
-                phoneInput.classList.remove("error");
-                errorMsg.style.display = "none";
-                validMsg.style.display = "none";
-            };
-
-            const validate = () => {
-                reset();
-                if (phoneInput.value.trim()) {
-                    if (iti.isValidNumber()) {
-                        validMsg.style.display = "flex";
-                        fullPhoneInput.value = iti.getNumber();
-                    } else {
-                        phoneInput.classList.add("error");
-                        errorMsg.style.display = "flex";
-                    }
-                }
-            };
-
-            const update = () => {
-                fullPhoneInput.value = iti.getNumber();
-                validate();
-            };
-
-            phoneInput.addEventListener('change', update);
-            phoneInput.addEventListener('keyup', update);
-            phoneInput.addEventListener('input', () => {
-                phoneInput.value = phoneInput.value.replace(/[^0-9]/g, '');
-                update();
-            });
-
-            const mainForm = document.querySelector('form.contact-modern-form');
-            if (mainForm) {
-                mainForm.addEventListener('submit', function(e) {
-                    update();
-                    if (!iti.isValidNumber() && phoneInput.value.trim() !== '') {
-                        e.preventDefault();
-                        validate();
-                    }
-                });
-            }
-        }
-
-        // Submit button loading state
+        // Main Form & AJAX Logic
         const form = document.querySelector('form.contact-modern-form');
         const submitBtn = document.querySelector('#contact-submit');
+        const ajaxAlert = document.querySelector('#ajax-success-alert');
+        const ajaxMsg = document.querySelector('#ajax-success-message');
+
         if (form && submitBtn) {
-            form.addEventListener('submit', function() {
+            // Keep phone logic available to the submit listener
+            let iti = null;
+            if (phoneInput && fullPhoneInput) {
+                iti = window.intlTelInput(phoneInput, {
+                    initialCountry: 'pk',
+                    separateDialCode: true,
+                    utilsScript: 'https://cdn.jsdelivr.net/npm/intl-tel-input@24.5.2/build/js/utils.js',
+                });
+
+                const reset = () => {
+                    phoneInput.classList.remove("error");
+                    if (errorMsg) errorMsg.style.display = "none";
+                    if (validMsg) validMsg.style.display = "none";
+                };
+
+                const validate = () => {
+                    reset();
+                    if (phoneInput.value.trim()) {
+                        if (iti.isValidNumber()) {
+                            if (validMsg) validMsg.style.display = "flex";
+                            fullPhoneInput.value = iti.getNumber();
+                            return true;
+                        } else {
+                            phoneInput.classList.add("error");
+                            if (errorMsg) errorMsg.style.display = "flex";
+                            return false;
+                        }
+                    }
+                    return true;
+                };
+
+                const update = () => {
+                    fullPhoneInput.value = iti.getNumber();
+                    validate();
+                };
+
+                // Prevent non-numeric characters during keypress
+                phoneInput.addEventListener('keypress', function(e) {
+                    if (e.which < 48 || e.which > 57) {
+                        e.preventDefault();
+                    }
+                });
+
+                phoneInput.addEventListener('change', update);
+                phoneInput.addEventListener('keyup', update);
+                phoneInput.addEventListener('input', () => {
+                    phoneInput.value = phoneInput.value.replace(/[^0-9]/g, '');
+                    if (phoneInput.value.length > 11) {
+                        phoneInput.value = phoneInput.value.slice(0, 11);
+                    }
+                    update();
+                });
+            }
+
+            form.addEventListener('submit', function(e) {
+                e.preventDefault(); // Prevent standard reload
+
+                // Phone validation check
+                if (iti && phoneInput.value.trim() !== '') {
+                    if (!iti.isValidNumber()) {
+                        phoneInput.classList.add("error");
+                        if (errorMsg) errorMsg.style.display = "flex";
+                        return;
+                    }
+                }
+
                 submitBtn.disabled = true;
                 const label = submitBtn.querySelector('.btn-label');
+                const originalText = label ? label.textContent : 'Send Message';
                 if (label) label.textContent = 'Sending...';
+
+                const formData = new FormData(form);
+
+                fetch(form.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'X-Requested-With': 'XMLHttpRequest',
+                        'Accept': 'application/json'
+                    }
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.status === 'success') {
+                        // Show success alert
+                        if (ajaxAlert && ajaxMsg) {
+                            ajaxMsg.textContent = data.message;
+                            ajaxAlert.style.display = 'flex';
+                            ajaxAlert.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                        }
+                        form.reset();
+                        if (iti) iti.setCountry('pk');
+                    } else {
+                        alert(data.message || 'Something went wrong. Please try again.');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('An error occurred. Please check your connection.');
+                })
+                .finally(() => {
+                    submitBtn.disabled = false;
+                    if (label) label.textContent = originalText;
+                });
             });
         }
 
         // Success Message Auto-hide
-        const successAlert = document.querySelector('.contact-success-alert');
-        if (successAlert) {
-            setTimeout(() => {
-                successAlert.classList.add('fade-out');
-                setTimeout(() => {
-                    successAlert.style.display = 'none';
-                }, 500); // Wait for CSS transition
-            }, 5000); // 5 seconds
+        function autoHideAlerts() {
+            const alerts = document.querySelectorAll('.contact-success-alert');
+            alerts.forEach(alert => {
+                if (alert.style.display !== 'none' && !alert.classList.contains('fading')) {
+                    setTimeout(() => {
+                        alert.classList.add('fade-out');
+                        alert.classList.add('fading');
+                        setTimeout(() => {
+                            alert.style.display = 'none';
+                            alert.classList.remove('fade-out');
+                            alert.classList.remove('fading');
+                        }, 500);
+                    }, 5000);
+                }
+            });
+        }
+
+        autoHideAlerts();
+
+        const observer = new MutationObserver((mutations) => {
+            mutations.forEach((mutation) => {
+                if (mutation.attributeName === 'style' && mutation.target.style.display === 'flex') {
+                    autoHideAlerts();
+                }
+            });
+        });
+        if (ajaxAlert) {
+            observer.observe(ajaxAlert, { attributes: true });
         }
     });
 </script>
