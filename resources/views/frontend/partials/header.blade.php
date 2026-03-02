@@ -11,12 +11,12 @@
     <!-- Desktop Navigation -->
     <nav class="desktop-nav">
         <ul>
-            <li> <a href="{{ url('/') }}">Home</a> </li>
-            <li> <a href="{{ url('/#about') }}">About</a> </li>
-            <!-- <li> <a href="{{ url('/#process') }}">Process</a> </li> -->
-            <li> <a href="{{ url('/#blog') }}">Blog</a> </li>
-            <li> <a href="{{ url('/#team') }}">Team</a> </li>
-            <li> <a href="{{ url('/#contact') }}">Contact Us</a> </li>
+            <li> <a href="{{ url('/') }}"><i class="fa fa-home"></i> Home</a> </li>
+            <li> <a href="{{ url('/#about') }}"><i class="fa fa-info-circle"></i> About</a> </li>
+            <!-- <li> <a href="{{ url('/#process') }}"><i class="fa fa-cogs"></i> Process</a> </li> -->
+            <li> <a href="{{ url('/#blog') }}"><i class="fa fa-newspaper-o"></i> Blog</a> </li>
+            <li> <a href="{{ url('/#team') }}"><i class="fa fa-users"></i> Team</a> </li>
+            <li> <a href="{{ url('/#contact') }}"><i class="fa fa-envelope"></i> Contact Us</a> </li>
         </ul>
     </nav>
     <!-- Mobile Menu Button -->
@@ -38,16 +38,29 @@
     });
 
     // Mobile Menu Toggle
-    document.getElementById('mobileMenuBtn').addEventListener('click', function() {
-        const nav = document.querySelector('.desktop-nav');
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const nav = document.querySelector('.desktop-nav');
+    const menuIcon = mobileMenuBtn.querySelector('i');
+
+    function toggleMenu() {
         nav.classList.toggle('active');
-        const icon = this.querySelector('i');
         if (nav.classList.contains('active')) {
-            icon.classList.remove('fa-bars');
-            icon.classList.add('fa-times');
+            menuIcon.classList.remove('fa-bars');
+            menuIcon.classList.add('fa-times');
         } else {
-            icon.classList.remove('fa-times');
-            icon.classList.add('fa-bars');
+            menuIcon.classList.remove('fa-times');
+            menuIcon.classList.add('fa-bars');
         }
+    }
+
+    mobileMenuBtn.addEventListener('click', toggleMenu);
+
+    // Auto-close menu when a link is clicked
+    document.querySelectorAll('.desktop-nav a').forEach(link => {
+        link.addEventListener('click', () => {
+            if (nav && nav.classList.contains('active')) {
+                toggleMenu();
+            }
+        });
     });
 </script>
