@@ -1,15 +1,69 @@
 <!-- Footer -->
 <footer id="footer">
     <div class="inner">
-        <ul class="icons">
-            <li><a href="#" class="icon alt fa-twitter"><span class="label">Twitter</span></a></li>
-            <li><a href="#" class="icon alt fa-facebook"><span class="label">Facebook</span></a></li>
-            <li><a href="#" class="icon alt fa-instagram"><span class="label">Instagram</span></a></li>
-            <li><a href="#" class="icon alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
-        </ul>
-        <ul class="copyright">
-            <li>Copyright © 2020 Nexer Tech Solutions:</li>
-            <li> <a href="https://nexersol.com//">nexersol.com</a></li>
-        </ul>
+        <div class="footer-logo-row" style="margin-bottom: 25px !important; display: block !important;">
+            <img src="{{ asset('images/logo.png') }}" alt="Nexer Technology" style="height: 60px !important; display: block !important;">
+        </div>
+        <div class="footer-grid">
+            <!-- About Section -->
+            <div class="footer-col ao-fade-up">
+                <h3>About Nexer Tech Solutions</h3>
+                <p>Nexer Tech Solutions is expert in providing scaleable and flexible customized ERP solutions and Data security solutions based on PKI and Cryptography that help businesses unlock their true potential with security and reliability.</p>
+            </div>
+
+            <!-- Company Section -->
+            <div class="footer-col ao-fade-up">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="{{ route('about') }}">About Us</a></li>
+                    <li><a href="{{ route('authors') }}">Team</a></li>
+                    <li><a href="{{ route('home') }}#testimonials">Customers</a></li>
+                    <li><a href="{{ url('/#blog') }}">Blog</a></li>
+                    <li><a href="{{ url('/#contact') }}">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Services Section -->
+            <div class="footer-col ao-fade-up">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="#">Web Design</a></li>
+                    <li><a href="#">Development</a></li>
+                    <li><a href="#">Animation</a></li>
+                    <li><a href="#">Mobile Apps</a></li>
+                    <li><a href="#">Campaign</a></li>
+                </ul>
+            </div>
+
+            <!-- Help & Support Section -->
+            <div class="footer-col ao-fade-up">
+                <h3>Help & Support</h3>
+                <ul>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="{{ url('/#contact') }}">Contact Us</a></li>
+                    <li><a href="#">Live Chat</a></li>
+                    <li><a href="#">Terms of Services</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="copyright-bar ao-fade-up">
+            &copy; Copyright 2020 - Nexer Tech Solutions
+            <a href="#" class="back-to-top" id="backToTop">
+                <i class="fa fa-arrow-up"></i>
+            </a>
+        </div>
     </div>
 </footer>
+
+<script>
+    // Back to Top functionality
+    document.getElementById('backToTop').addEventListener('click', function(e) {
+        e.preventDefault();
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+</script>

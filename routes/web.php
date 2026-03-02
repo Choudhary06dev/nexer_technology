@@ -1,19 +1,22 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ContactController;
 
 Route::get('/', function () {
     return view('frontend.index');
-});
+})->name('home');
 
+// Redirecting separate pages to Home page sections for single-page experience
+Route::get('/blog', function () {
+    return view('frontend.blog');
+})->name('blog');
 Route::get('/about-us', function () {
-    return view('frontend.about-us');
+    return redirect('/#about');
 })->name('about');
-
-Route::get('/contact', function () {
-    return view('frontend.contact');
-})->name('contact');
-
 Route::get('/authors', function () {
-    return view('frontend.team');
+    return redirect('/#team');
 })->name('authors');
+Route::get('/contact', [ContactController::class, 'index'])->name('contact');
+
+Route::post('/contact', [ContactController::class, 'store']);
