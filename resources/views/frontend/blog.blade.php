@@ -57,7 +57,7 @@
         <div class="featured-post-container ao-fade-up">
             <article class="featured-card">
                 <div class="featured-img">
-                    <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=1200&auto=format&fit=crop" alt="AI Breakthrough">
+                    <img src="{{ asset('images/blog-featured-ai.jpg') }}" alt="AI Breakthrough">
                 </div>
                 <div class="featured-content">
                     <div class="card-meta-row">
@@ -67,7 +67,7 @@
                     <h2>Empowering Digital Transformation: A Roadmap for Modern Enterprises</h2>
                     <p>Discover how Nexer Technology helps global organizations navigate the complex landscape of digital transformation with scalable, enterprise-grade software solutions.</p>
                     <div class="author-row">
-                        <img src="https://i.pravatar.cc/150?u=1" alt="Author">
+                        <img src="{{ asset('images/author-1.jpg') }}" alt="Author">
                         <div class="author-info">
                             <strong>Sarah Jenkins</strong>
                             <span>Head of AI Research</span>
@@ -83,7 +83,7 @@
             <!-- Article 1 -->
             <article class="glass-card ao-fade-up">
                 <div class="card-image-wrap">
-                    <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=800&auto=format&fit=crop" alt="Software Development">
+                    <img src="{{ asset('images/blog-1.jpg') }}" alt="Software Development">
                     <div class="card-category-badge">Software Engineering</div>
                 </div>
                 <div class="card-body-premium">
@@ -103,7 +103,7 @@
             <!-- Article 2 -->
             <article class="glass-card ao-fade-up">
                 <div class="card-image-wrap">
-                    <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=800&auto=format&fit=crop" alt="Web Solutions">
+                    <img src="{{ asset('images/blog-2.jpg') }}" alt="Web Solutions">
                     <div class="card-category-badge">Web & Apps</div>
                 </div>
                 <div class="card-body-premium">
@@ -123,7 +123,7 @@
             <!-- Article 3 -->
             <article class="glass-card ao-fade-up">
                 <div class="card-image-wrap">
-                    <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=800&auto=format&fit=crop" alt="Cloud Tech">
+                    <img src="{{ asset('images/blog-3.jpg') }}" alt="Cloud Tech">
                     <div class="card-category-badge">Cloud Tech</div>
                 </div>
                 <div class="card-body-premium">
@@ -145,7 +145,7 @@
                 <!-- Article 4 -->
                 <article class="glass-card ao-fade-up">
                     <div class="card-image-wrap">
-                        <img src="https://images.unsplash.com/photo-1545235617-9465d2a55698?q=80&w=800&auto=format&fit=crop" alt="UI/UX Design">
+                        <img src="{{ asset('images/blog-4.jpg') }}" alt="UI/UX Design">
                         <div class="card-category-badge">Experience Design</div>
                     </div>
                     <div class="card-body-premium">
@@ -165,7 +165,7 @@
                 <!-- Article 5 -->
                 <article class="glass-card ao-fade-up">
                     <div class="card-image-wrap">
-                        <img src="https://images.unsplash.com/photo-1516259762381-22954d7d3ad2?q=80&w=800&auto=format&fit=crop" alt="API Systems">
+                        <img src="{{ asset('images/blog-5.jpg') }}" alt="API Systems">
                         <div class="card-category-badge">Integrations</div>
                     </div>
                     <div class="card-body-premium">
@@ -185,7 +185,7 @@
                 <!-- Article 6 -->
                 <article class="glass-card ao-fade-up">
                     <div class="card-image-wrap">
-                        <img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?q=80&w=800&auto=format&fit=crop" alt="Startup Growth">
+                        <img src="{{ asset('images/blog-6.jpg') }}" alt="Startup Growth">
                         <div class="card-category-badge">Strategy</div>
                     </div>
                     <div class="card-body-premium">
