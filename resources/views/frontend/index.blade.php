@@ -14,7 +14,7 @@
     <div class="banner-bg-overlay"></div>
     <div class="hero-content">
         <h1>Empowering Your <span>Digital Future</span></h1>
-        <p>Nexer Technology provides cutting-edge tech expertise to scale and transform your business for the modern landscape.</p>
+        <p>Nexer Tech Solutions provides cutting-edge tech expertise to scale and transform your business for the modern landscape.</p>
         <div class="hero-actions">
             <a href="#about" class="hero-btn primary scrolly">Learn More</a>
             <a href="#contact" class="hero-btn secondary scrolly">Get Started</a>
@@ -346,7 +346,7 @@
                 const targetElement = document.querySelector(targetId);
                 if (targetElement) {
                     e.preventDefault();
-                    const headerHeight = 130; // Increased for taller mobile header
+                    const headerHeight = 60; // Reduced to match mobile header
                     const elementTop = targetElement.getBoundingClientRect().top + window.scrollY;
                     window.scrollTo({
                         top: elementTop - headerHeight - 20, // More breathing room
