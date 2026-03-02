@@ -2,7 +2,7 @@
 <footer id="footer">
     <div class="inner">
         <div class="footer-logo-row" style="margin-bottom: 25px !important; display: block !important;">
-            <img src="{{ asset('images/footerlogo.png') }}" alt="Nexer Technology" style="height: 60px !important; display: block !important;">
+            <img src="{{ asset('images/logo.png') }}" alt="Nexer Technology" style="height: 60px !important; display: block !important;">
         </div>
         <div class="footer-grid">
             <!-- About Section -->

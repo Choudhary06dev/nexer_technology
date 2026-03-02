@@ -94,7 +94,7 @@
                     <h3>Custom Software Development</h3>
                     <p>How we build scalable, high-performance software solutions tailored to solve unique business challenges across diverse industries.</p>
                     <div class="card-footer-premium">
-                        <div class="mini-author">By <span>Arslan Khan</span></div>
+                        <div class="mini-author">By <span>Rao Hamid Mustafa</span></div>
 
                     </div>
                 </div>

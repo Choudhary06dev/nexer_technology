@@ -346,7 +346,7 @@
                 const targetElement = document.querySelector(targetId);
                 if (targetElement) {
                     e.preventDefault();
-                    const headerHeight = 130; // Increased for taller mobile header
+                    const headerHeight = 60; // Reduced to match mobile header
                     const elementTop = targetElement.getBoundingClientRect().top + window.scrollY;
                     window.scrollTo({
                         top: elementTop - headerHeight - 20, // More breathing room

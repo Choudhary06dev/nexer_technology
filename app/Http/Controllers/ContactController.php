@@ -34,7 +34,7 @@ class ContactController extends Controller
         ]);
 
         // Send email notification
-        Mail::to('amjad.softdev@gmail.com')->send(new ContactMail($contact->toArray()));
+        Mail::to('manager@nexersol.com')->send(new ContactMail($contact->toArray()));
 
         if ($request->ajax()) {
             return response()->json([

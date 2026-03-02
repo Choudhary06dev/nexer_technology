@@ -606,10 +606,11 @@
 
         .about-img-col {
             order: -1;
+            margin-top: 0; /* Remove negative margin on mobile to prevent overlap */
         }
 
         .about-img-wrapper img {
-            height: 280px;
+            height: 320px;
         }
 
         .about-stats-row {
@@ -636,7 +637,7 @@
 
     @media (max-width: 480px) {
         .about-intro-modern {
-            padding: 7em 0 2em;
+            padding: 2em 0 2em; /* Reduced for better mobile alignment */
         }
 
         .about-headline {
@@ -646,7 +647,7 @@
 
     @media (max-width: 380px) {
         .about-intro-modern {
-            padding: 6.5em 0 1.5em;
+            padding: 3.5em 0 1.5em; /* Reduced from 6.5em */
         }
 
         .about-label {
@@ -657,7 +658,7 @@
 
     @media (max-width: 320px) {
         .about-intro-modern {
-            padding: 6em 0 1em;
+            padding: 3em 0 1em; /* Reduced from 6em */
         }
 
         .about-container {

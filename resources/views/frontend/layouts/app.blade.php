@@ -271,18 +271,17 @@
             }
 
             #wrapper {
-                padding-top: 130px;
-                /* Increased offset for taller mobile header */
+                padding-top: 0 !important;
             }
 
             body {
-                scroll-padding-top: 130px;
+                scroll-padding-top: 60px; /* Reduced offset for mobile */
             }
 
             section[id],
             div[id],
             .about-intro-modern {
-                scroll-margin-top: 130px !important;
+                scroll-margin-top: 60px !important;
             }
         }
 
