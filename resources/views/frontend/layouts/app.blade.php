@@ -23,7 +23,7 @@
         }
 
         body {
-            scroll-padding-top: 28px;
+            scroll-padding-top: 80px;
             /* Offset for fixed header height */
             margin: 0 !important;
             padding: 0 !important;
@@ -67,7 +67,7 @@
 
         section[id],
         div[id] {
-            scroll-margin-top: 28px !important;
+            scroll-margin-top: 80px !important;
             /* Adjusted for better alignment */
         }
 
@@ -87,6 +87,40 @@
             position: fixed !important;
         }
 
+        /* Logo Flex Styles */
+        #header .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            margin-left: 20px;
+            white-space: nowrap;
+        }
+
+        #header .logo img {
+            height: 38px;
+            width: auto;
+            margin-right: 10px;
+        }
+
+        #header .logo .logo-text {
+            display: flex;
+            align-items: baseline;
+            gap: 4px;
+        }
+
+        #header .logo strong {
+            color: #004de6;
+            font-weight: 800;
+            font-size: 1.15em;
+        }
+
+        #header .logo span {
+            color: #000000;
+            font-weight: 700;
+            font-size: 0.85em;
+            opacity: 0.9;
+        }
+
         /* Logo: always show as original (no filter - PNG has white background) */
         #header .logo img,
         .modern-header .logo img {
@@ -97,12 +131,6 @@
         #header nav ul li a,
         .modern-header nav ul li a {
             color: #004de6 !important;
-        }
-
-        #header nav ul li a:hover,
-        .modern-header nav ul li a:hover {
-            color: #004de6 !important;
-            opacity: 0.8;
         }
 
         /* Mobile Menu Styles */
@@ -140,7 +168,8 @@
                 width: 100%;
                 background: white;
                 box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-                display: none !important; /* hidden by default on mobile */
+                display: none !important;
+                /* hidden by default on mobile */
                 flex-direction: column;
                 padding: 10px 0;
             }
@@ -176,9 +205,91 @@
             }
         }
 
+        @media (max-width: 480px) {
+            #header .logo {
+                margin-left: 10px;
+            }
+
+            #header .logo img {
+                height: 28px;
+                margin-right: 8px;
+            }
+
+            #header .logo .logo-text {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0;
+            }
+
+            #header .logo strong {
+                font-size: 0.85em;
+                line-height: 1.1;
+                display: block;
+                white-space: nowrap;
+            }
+
+            #header .logo span {
+                font-size: 0.55em;
+                line-height: 1.1;
+                display: block;
+                white-space: nowrap;
+            }
+
+            .mobile-menu-btn {
+                margin-right: 10px;
+                font-size: 1.25em;
+            }
+
+            @media (max-width: 380px) {
+                #header .logo img {
+                    height: 26px;
+                }
+
+                #header .logo strong {
+                    font-size: 0.85em;
+                }
+
+                #header .logo span {
+                    font-size: 0.55em;
+                }
+            }
+
+            @media (max-width: 320px) {
+                #header .logo img {
+                    height: 22px;
+                    margin-right: 4px;
+                }
+
+                #header .logo strong {
+                    font-size: 0.75em;
+                }
+
+                #header .logo span {
+                    font-size: 0.5em;
+                }
+            }
+
+            #wrapper {
+                padding-top: 130px;
+                /* Increased offset for taller mobile header */
+            }
+
+            body {
+                scroll-padding-top: 130px;
+            }
+
+            section[id],
+            div[id],
+            .about-intro-modern {
+                scroll-margin-top: 130px !important;
+            }
+        }
+
         /* Footer Compression */
         #footer {
-            padding: 2.5em 0 0 !important; /* Increased top padding to move logo down */
+            padding: 2.5em 0 0 !important;
+            /* Increased top padding to move logo down */
             margin-bottom: 0 !important;
             flex-shrink: 0;
             margin-top: 3em !important;
@@ -259,12 +370,14 @@
                 grid-template-columns: 1fr 1fr !important;
                 gap: 2em 1em !important;
             }
+
             .footer-col {
                 flex: none !important;
                 margin: 0 !important;
                 min-width: 0 !important;
                 width: 100% !important;
             }
+
             .footer-col:first-child,
             .footer-col:last-child {
                 grid-column: span 2;
