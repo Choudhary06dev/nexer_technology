@@ -127,6 +127,10 @@
             filter: none !important;
         }
 
+        #header nav ul li a i {
+            display: none; /* Hide icons on desktop by default */
+        }
+
         /* Nav Links: dark blue per user request */
         #header nav ul li a,
         .modern-header nav ul li a {
@@ -162,46 +166,103 @@
             }
 
             #header nav.desktop-nav {
-                position: absolute;
-                top: 100%;
+                position: fixed;
+                top: 60px; /* Aligned with fixed header */
                 left: 0;
                 width: 100%;
-                background: white;
-                box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+                height: auto;
+                background: rgba(255, 255, 255, 0.98) !important;
+                backdrop-filter: blur(15px) saturate(180%);
+                -webkit-backdrop-filter: blur(15px) saturate(180%);
+                box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
                 display: none !important;
-                /* hidden by default on mobile */
                 flex-direction: column;
-                padding: 10px 0;
+                padding: 20px 0;
+                border-top: 1px solid rgba(255, 255, 255, 0.3);
+                z-index: 999;
+                transform: translateY(-20px);
+                opacity: 0;
+                transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
             }
 
             #header nav.desktop-nav.active {
                 display: flex !important;
+                transform: translateY(0);
+                opacity: 1;
             }
 
             #header nav ul {
-                flex-direction: column;
-                gap: 0;
-                padding: 0;
-                margin: 0;
-                list-style: none;
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: flex-start !important;
+                justify-content: flex-start !important;
+                gap: 5px !important;
+                padding: 10px 20px !important;
+                margin: 0 !important;
+                list-style: none !important;
+                width: 100% !important;
             }
 
             #header nav ul li {
-                width: 100%;
-                text-align: center;
-                margin: 0;
-                padding: 0;
+                width: 100% !important;
+                text-align: left !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                display: block !important;
+                transform: translateX(-15px);
+                opacity: 0;
+                transition: all 0.3s ease;
             }
+
+            #header nav.desktop-nav.active ul li {
+                transform: translateX(0);
+                opacity: 1;
+            }
+
+            /* Staggered animation for menu items */
+            #header nav.desktop-nav.active ul li:nth-child(1) { transition-delay: 0.1s; }
+            #header nav.desktop-nav.active ul li:nth-child(2) { transition-delay: 0.15s; }
+            #header nav.desktop-nav.active ul li:nth-child(3) { transition-delay: 0.2s; }
+            #header nav.desktop-nav.active ul li:nth-child(4) { transition-delay: 0.25s; }
+            #header nav.desktop-nav.active ul li:nth-child(5) { transition-delay: 0.3s; }
 
             #header nav ul li a,
             .modern-header nav ul li a {
-                display: block;
-                padding: 15px;
-                border-bottom: 1px solid #f1f5f9;
+                display: flex !important;
+                align-items: center !important;
+                width: 100% !important;
+                text-align: left !important;
+                padding: 14px 18px !important;
+                border-radius: 12px !important;
+                border-bottom: none !important;
+                margin: 2px 0 !important;
+                color: #1e293b !important;
+                font-size: 0.95em !important;
+                font-weight: 600 !important;
+                letter-spacing: 0.02em !important;
+                transition: all 0.2s ease !important;
+                background: transparent;
             }
 
-            #header nav ul li:last-child a {
-                border-bottom: none;
+            #header nav ul li a i {
+                display: inline-block !important; /* Show icons only on mobile */
+                margin-right: 15px;
+                font-size: 1.1em;
+                width: 24px;
+                text-align: center;
+                color: #004de6;
+                transition: transform 0.3s ease;
+            }
+
+            #header nav ul li a:hover,
+            #header nav ul li a:active {
+                background: rgba(0, 77, 230, 0.08) !important;
+                color: #004de6 !important;
+                padding-left: 24px !important;
+            }
+
+            #header nav ul li a:hover i {
+                transform: scale(1.2);
             }
         }
 
