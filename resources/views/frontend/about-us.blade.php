@@ -20,7 +20,7 @@
         <div class="about-container">
 
             <!-- Section Label -->
-            <div class="about-label ao-fade-up">
+            <div class="about-label about-label--mobile-center ao-fade-up">
                 <span class="label-dot"></span>
                 Who We Are
             </div>
@@ -623,6 +623,45 @@
 
         .about-headline {
             font-size: 1.8em !important;
+        }
+
+        .about-label--mobile-center {
+            display: flex;
+            justify-content: center;
+            margin-left: auto;
+            margin-right: auto;
+            width: fit-content;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .about-intro-modern {
+            padding: 7em 0 2em;
+        }
+
+        .about-headline {
+            font-size: 1.6em !important;
+        }
+    }
+
+    @media (max-width: 380px) {
+        .about-intro-modern {
+            padding: 6.5em 0 1.5em;
+        }
+
+        .about-label {
+            font-size: 0.65em;
+            padding: 4px 12px;
+        }
+    }
+
+    @media (max-width: 320px) {
+        .about-intro-modern {
+            padding: 6em 0 1em;
+        }
+
+        .about-container {
+            padding: 0 1em;
         }
     }
 </style>

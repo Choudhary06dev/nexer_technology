@@ -335,17 +335,21 @@
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         // Smooth scrolling for anchor links (with fixed header offset)
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        document.querySelectorAll('a[href^="#"], a[href*="/#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                if (targetId === '#') return;
+                const href = this.getAttribute('href');
+                const targetId = href.includes('#') ? '#' + href.split('#')[1] : null;
+
+                if (!targetId || targetId === '#') return;
+
+                // Only prevent default if target exists on current page
                 const targetElement = document.querySelector(targetId);
                 if (targetElement) {
-                    const headerHeight = document.getElementById('header')?.offsetHeight || 90;
+                    e.preventDefault();
+                    const headerHeight = 130; // Increased for taller mobile header
                     const elementTop = targetElement.getBoundingClientRect().top + window.scrollY;
                     window.scrollTo({
-                        top: elementTop - headerHeight - 20, // Adjusted offset to clear the fixed header
+                        top: elementTop - headerHeight - 20, // More breathing room
                         behavior: 'smooth'
                     });
                 }
