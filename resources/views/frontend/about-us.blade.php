@@ -125,9 +125,9 @@
                         <div class="fcard-line"></div>
                     </div>
                     <div class="fcard ao-fade-up">
-                        <div class="fcard-icon"><i class="fa fa-paint-brush"></i></div>
-                        <h3>UI/UX Design</h3>
-                        <p>User-centric design that prioritizes accessibility, aesthetics, and seamless interactions.</p>
+                        <div class="fcard-icon"><i class="fa fa-video-camera"></i></div>
+                        <h3>Video Analytics Solutions</h3>
+                        <p>Transform traditional CCTV into a proactive, intelligent network with AI insights.</p>
                         <div class="fcard-line"></div>
                     </div>
                     <div class="fcard ao-fade-up">
@@ -163,9 +163,9 @@
                         <div class="fcard-line"></div>
                     </div>
                     <div class="fcard ao-fade-up">
-                        <div class="fcard-icon"><i class="fa fa-paint-brush"></i></div>
-                        <h3>UI/UX Design</h3>
-                        <p>User-centric design that prioritizes accessibility, aesthetics, and seamless interactions.</p>
+                        <div class="fcard-icon"><i class="fa fa-video-camera"></i></div>
+                        <h3>Video Analytics Solutions</h3>
+                        <p>Transform traditional CCTV into a proactive, intelligent network with AI insights.</p>
                         <div class="fcard-line"></div>
                     </div>
                     <div class="fcard ao-fade-up">
@@ -448,7 +448,7 @@
     /* ---- Features Section ---- */
     .about-features-modern {
         padding: 3em 0 5em;
-        background: #f8fafc;
+        background: #f1f5f9 !important; /* Forces distinct light tech-grey background */
     }
 
     .features-slider-container {
@@ -458,6 +458,8 @@
         position: relative;
         width: 100vw;
         margin-left: calc(-50vw + 50%);
+        -webkit-mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+        mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
     }
 
     .features-slider-track {

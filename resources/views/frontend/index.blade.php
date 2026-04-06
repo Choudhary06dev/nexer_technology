@@ -27,6 +27,8 @@
 
     @include('frontend.about-us', ['is_index' => true])
 
+    @include('frontend.video-analytics', ['is_index' => true])
+
     @include('frontend.process', ['is_index' => true])
 
     @include('frontend.blog', ['is_index' => true])
